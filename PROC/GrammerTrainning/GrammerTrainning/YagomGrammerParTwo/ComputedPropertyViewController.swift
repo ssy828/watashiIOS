@@ -1,0 +1,35 @@
+
+// 연산프로퍼티 연습
+
+import UIKit
+import Foundation
+
+class ComputedPropertyViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        
+        var ssyPoint: CoordiPoint = CoordiPoint(x: 10, y: 10)
+        // 현재 좌표
+        print(ssyPoint)
+        
+        // 대치좌표
+        print(ssyPoint.oppositePoint) // -10 , -10
+    
+    }
+
+  
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
