@@ -8,23 +8,9 @@ import UIKit
 // 지금 뷰위에는 올려만 놓고 실행은 뷰컨트롤러에서 한다!
 class LyricsView: UIView
 {
-    
+    // 이 클래스 뷰가 처음부터 안 보이게 hidden을 해놓고
     @IBOutlet var textView: UITextView!
- 
    
-    
-    // 연산프로퍼티 + 프로퍼티 감시자 사용
-    var data: AlbumInfo?
-//    {
-//        // 새로운 값이 저장된 직후 사용!
-//        didSet{
-//           
-//            self.textView.text = self.data?.lyrics
-//            
-//        }
-//
-//    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // MARK: 가사뷰 탭하면 닫기

@@ -1,6 +1,7 @@
 
 import UIKit
 import AVKit
+import AVFoundation
 // MARK: 뷰컨트롤러
 // 데이터와 뷰 사이에서 연결통로
 class ViewController: UIViewController {
@@ -9,14 +10,16 @@ class ViewController: UIViewController {
     // 뷰랑 뷰컨트롤러 데이터소스와 델리게이트 꼭 연결!!!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lyricsView: LyricsView!
+//    @IBOutlet weak var playBtn: UIButton!
     // 이미 이곳에서 뷰가 만들어지고
     // -> LyricsView 이곳에서 아무리 데이터를 생성해도 받아오질 못함
     // 그래서 여기 뷰컨트롤러에서 받아오는 것을 씀!
     
+    // MARK: 음악관련 프로퍼티
     // 음악 연결 인스턴스
-    var audioPlayer: AVPlayer?
-    // 음악플레이 여부
-    var isPlaying: Bool = false
+    // var player: AVPlayer?
+    var audioPlayer: AVAudioPlayer! // AVFoundation에 있는 클래스
+  
     // MARK: SongData 관리
     var currentIndex: Int = 0 // 현재 위치에 나타날 데이터 불러오기
     // MusicManager의 싱글패턴을 멤버변수에 할당
@@ -30,40 +33,35 @@ class ViewController: UIViewController {
         //        self.collectionView.isPagingEnabled = true
         
     }
-    
-    
+  
 }
 // MARK: Action
 extension ViewController
 {
     // 뒤로가기 버튼
-    @IBAction func previousBtn(_ sender: Any) {
+    @IBAction func previousBtn(_ sender: UIButton) {
         currentIndex -= 1
-        collectionView.scrollToItem(at: IndexPath(row: currentIndex, section: 0), at: .centeredHorizontally, animated: true)
+        musicPlay()
     }
     // 실행 버튼
-    @IBAction func playBtn(_ sender: Any) {
-        
-        let urlData = musicModel.albumInfo[currentIndex]
-        if let urlPath = Bundle.main.url(forResource: "Music/\(urlData.songURL)", withExtension: "mp3")
+    @IBAction func playOrPauseBtn(_ sender: UIButton) {
+        musicPlay()
+        // 먼저 audioPlayer 인스턴스 생성하고 아래코드 실행
+        if audioPlayer.isPlaying
         {
-            
-            let assets = AVAsset(url: urlPath)
-            let playItem = AVPlayerItem(asset: assets, automaticallyLoadedAssetKeys: nil)
-            audioPlayer = AVPlayer(playerItem: playItem)
-           if isPlaying {
-                audioPlayer?.play()
-                isPlaying = true
-            }
-           
+            sender.isSelected = false
+            audioPlayer.pause()
+        }else{
+            sender.isSelected = true
+            audioPlayer.play()
         }
-        
     }
     // 다음곡 실행버튼
-    @IBAction func nextBtn(_ sender: Any) {
+    @IBAction func nextBtn(_ sender: UIButton) {
+        // 다음 곡 실행을 위해 인덱스를 더함
         currentIndex += 1
-        
-        collectionView.scrollToItem(at: IndexPath(row: currentIndex, section: 0), at: .centeredHorizontally, animated: true)
+        // 음악플레이 메소드
+        musicPlay()
     }
     
     // 볼륨
@@ -71,12 +69,28 @@ extension ViewController
         
     }
     
+    // MARK: 음악플레이 메소드
     // 버튼사용시 음악파일 데이터를 가져와야하므로 -> 함수필요
     func musicPlay()
     {
-
+        let baseURL = musicModel.albumInfo[currentIndex]
+        // 번들에 담긴 음악주소를 가져와서 실행
+        if let url =  Bundle.main.url(forResource: "Music/\(baseURL.songURL)", withExtension: "mp3")
+        {
+            do{ // AVAudioPlayer는 throws 사용하므로
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                if audioPlayer.isPlaying == false
+                { // 음악실행 중아니면 -> 음악실행
+                    audioPlayer.play()
+                }else
+                {// 음악실행 중이면 -> 음악멈춤
+                    audioPlayer.pause()
+                }
+            }catch let error{
+                print(error.localizedDescription)
+            }
+        }
     }
-    
 }
 // MARK: Datasource
 extension ViewController: UICollectionViewDataSource
@@ -93,7 +107,7 @@ extension ViewController: UICollectionViewDataSource
         // 커스텀셀로 다운 캐스팅
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCollectionViewCell
         
-        // 뮤직모델(인스턴스)가 앨범정보배열에 파라미터 indexPath의 row프로퍼티를 담음??
+        // 뮤직모델(인스턴스)가 앨범정보배열에 파라미터 indexPath의 row프로퍼티를 담음
         let data = musicModel.albumInfo[indexPath.row]
 
         // 셀에서 넘길때 사용하는 것!
@@ -101,8 +115,6 @@ extension ViewController: UICollectionViewDataSource
         cell.imageView.image = data.image
         cell.titleLb.text = data.title
         cell.textView.text = data.lyrics
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapGesture(_:)))
-//        cell.textView.addGestureRecognizer(gesture)
 
         return cell
         
@@ -120,6 +132,7 @@ extension ViewController: UICollectionViewDataSource
 extension ViewController: UICollectionViewDelegate
 {
     // MARK: 셀이 선택되었을 때 실행하는 부분
+    // 어느 곳을 선택해도 가사뷰 나오게하려고 이쪽에 넣음
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentIndex = indexPath.row // 현재 선택할 음악 위치
         

@@ -34,7 +34,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                             <state key="normal" image="42-multimeda-play"/>
                                             <connections>
-                                                <action selector="playBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZ3-OY-uFC"/>
+                                                <action selector="playOrPauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RmD-55-lCL"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTp-W9-hdO">
