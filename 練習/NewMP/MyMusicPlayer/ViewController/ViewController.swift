@@ -31,7 +31,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //        loadData()
         //        self.collectionView.isPagingEnabled = true
-        
+        let baseURL = musicModel.albumInfo[currentIndex]
+        // 번들에 담긴 음악주소를 가져와서 실행
+        if let url =  Bundle.main.url(forResource: "Music/\(baseURL.songURL)", withExtension: "mp3")
+        {
+            do{ // AVAudioPlayer는 throws 사용하므로
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+            }catch let error{
+                print(error.localizedDescription)
+            }
+        }
     }
   
 }
@@ -40,28 +49,36 @@ extension ViewController
 {
     // 뒤로가기 버튼
     @IBAction func previousBtn(_ sender: UIButton) {
+       // 현재 인덱스에서 전의 인덱스로 가야하므로 -1
         currentIndex -= 1
+        // 음악플레이 메서드
         musicPlay()
+        // 페이지 바뀌는 메서드
+        clickToTheCurrentPage()
+        
     }
     // 실행 버튼
     @IBAction func playOrPauseBtn(_ sender: UIButton) {
-        musicPlay()
-        // 먼저 audioPlayer 인스턴스 생성하고 아래코드 실행
+        audioPlayer.prepareToPlay()
+        // 버퍼를 미리 준비해 재생할 오디오 플레이어 준비함!
         if audioPlayer.isPlaying
         {
-            sender.isSelected = false
             audioPlayer.pause()
+            sender.setImage((#imageLiteral(resourceName: "46-multimeda-pause")), for: UIControlState.normal)
         }else{
-            sender.isSelected = true
             audioPlayer.play()
+            sender.setImage((#imageLiteral(resourceName: "42-multimeda-play")), for: UIControlState.normal)
         }
+
     }
     // 다음곡 실행버튼
     @IBAction func nextBtn(_ sender: UIButton) {
-        // 다음 곡 실행을 위해 인덱스를 더함
+        // 다음 곡 실행을 위해 현재인덱스에서 1을 더함
         currentIndex += 1
-        // 음악플레이 메소드
+        // 음악플레이 메서드
         musicPlay()
+        // 페이지 바뀌는 메서드
+        clickToTheCurrentPage()
     }
     
     // 볼륨
@@ -91,6 +108,13 @@ extension ViewController
             }
         }
     }
+    // MARK: 버튼을 누르면 그 다음 페이지가 뜨게하는 메소드
+    func clickToTheCurrentPage()
+    {
+        collectionView.scrollToItem(at: IndexPath.init(row: currentIndex, section: 0), at: .centeredHorizontally , animated: true)
+        // 현재 컬렉션 뷰를 horizontal로 설정해서
+        // 스크롤이 넘길때 수평으로 넘어가서 .centeredHorizontally로 설정
+    }
 }
 // MARK: Datasource
 extension ViewController: UICollectionViewDataSource
@@ -119,14 +143,7 @@ extension ViewController: UICollectionViewDataSource
         return cell
         
     }
-    // MARK: 탭 했을때 가사뷰 띄우기
-//    @objc func didTapGesture(_ sender: UITapGestureRecognizer)
-//    {
-//        lyricsView.isHidden = false
-//       lyricsView.textView.text = self.musicModel.albumInfo[currentIndex].lyrics
-//
-//    }
-    
+  
 }
 // MARK: UICollectionViewDelegate
 extension ViewController: UICollectionViewDelegate
