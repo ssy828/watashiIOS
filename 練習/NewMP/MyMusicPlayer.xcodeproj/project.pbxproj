@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE4E20971FAABBD20093732B /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E20961FAABBD20093732B /* LyricsView.swift */; };
 		CE72522A1FA7134000BE9C7E /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7252291FA7134000BE9C7E /* CustomFlowLayout.swift */; };
+		CED4DD1D1FAFFF9400C7223D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4DD1C1FAFFF9400C7223D /* RegisterViewController.swift */; };
+		CED4DD1F1FB0023B00C7223D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4DD1E1FB0023B00C7223D /* RoundButton.swift */; };
 		CEE11E811FA459F900A02A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE11E801FA459F900A02A91 /* AppDelegate.swift */; };
 		CEE11E831FA459F900A02A91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE11E821FA459F900A02A91 /* ViewController.swift */; };
 		CEE11E861FA459F900A02A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE11E841FA459F900A02A91 /* Main.storyboard */; };
@@ -17,12 +19,22 @@
 		CEE11E991FA466AF00A02A91 /* AlbumInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE11E981FA466AF00A02A91 /* AlbumInfo.swift */; };
 		CEE11E9B1FA4672400A02A91 /* MusicManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE11E9A1FA4672400A02A91 /* MusicManage.swift */; };
 		CEE11E9D1FA467FF00A02A91 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE11E9C1FA467FF00A02A91 /* CustomCollectionViewCell.swift */; };
+		CEF18B731FAF078A0034BCF5 /* Login.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEF18B721FAF078A0034BCF5 /* Login.plist */; };
+		CEF18B791FAF12490034BCF5 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF18B781FAF12490034BCF5 /* LoginStoryboard.storyboard */; };
+		CEF18B7B1FAF13390034BCF5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF18B7A1FAF13390034BCF5 /* ListTableViewController.swift */; };
+		CEF18B821FAF1D9D0034BCF5 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF18B811FAF1D9D0034BCF5 /* LoginStoryboard.storyboard */; };
+		CEF18B841FAF1F8A0034BCF5 /* UserData.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEF18B831FAF1F8A0034BCF5 /* UserData.plist */; };
+		CEF18B861FAF48A50034BCF5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF18B851FAF48A50034BCF5 /* User.swift */; };
+		CEF18B881FAF50BB0034BCF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF18B871FAF50BB0034BCF5 /* LoginViewController.swift */; };
+		CEF18B8A1FAF51BE0034BCF5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF18B891FAF51BE0034BCF5 /* UserModel.swift */; };
 		CEFC3FE01FA4CE8C0053698F /* Music in Resources */ = {isa = PBXBuildFile; fileRef = CEFC3FDF1FA4CE8C0053698F /* Music */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE4E20961FAABBD20093732B /* LyricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
 		CE7252291FA7134000BE9C7E /* CustomFlowLayout.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; tabWidth = 4; };
+		CED4DD1C1FAFFF9400C7223D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CED4DD1E1FB0023B00C7223D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		CEE11E7D1FA459F900A02A91 /* MyMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE11E801FA459F900A02A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE11E821FA459F900A02A91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +45,14 @@
 		CEE11E981FA466AF00A02A91 /* AlbumInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfo.swift; sourceTree = "<group>"; };
 		CEE11E9A1FA4672400A02A91 /* MusicManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManage.swift; sourceTree = "<group>"; };
 		CEE11E9C1FA467FF00A02A91 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEF18B721FAF078A0034BCF5 /* Login.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Login.plist; sourceTree = "<group>"; };
+		CEF18B781FAF12490034BCF5 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		CEF18B7A1FAF13390034BCF5 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		CEF18B811FAF1D9D0034BCF5 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		CEF18B831FAF1F8A0034BCF5 /* UserData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserData.plist; sourceTree = "<group>"; };
+		CEF18B851FAF48A50034BCF5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEF18B871FAF50BB0034BCF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CEF18B891FAF51BE0034BCF5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		CEFC3FDF1FA4CE8C0053698F /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Music; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,11 +86,9 @@
 		CEE11E7F1FA459F900A02A91 /* MyMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				CEFC3FDF1FA4CE8C0053698F /* Music */,
-				CEE11E951FA45A9700A02A91 /* Model */,
-				CEE11E941FA45A8B00A02A91 /* Layout */,
-				CEE11E931FA45A7B00A02A91 /* ViewController */,
-				CEE11E921FA45A0000A02A91 /* View */,
+				CEF18B7C1FAF1CB70034BCF5 /* NewLogin */,
+				CEF18B6B1FAF06BC0034BCF5 /* Login  */,
+				CEF18B6A1FAF067F0034BCF5 /* AudioPlayer */,
 				CEE11E801FA459F900A02A91 /* AppDelegate.swift */,
 				CEE11E871FA459F900A02A91 /* Assets.xcassets */,
 				CEE11E891FA459F900A02A91 /* LaunchScreen.storyboard */,
@@ -110,6 +128,107 @@
 			children = (
 				CEE11E981FA466AF00A02A91 /* AlbumInfo.swift */,
 				CEE11E9A1FA4672400A02A91 /* MusicManage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEF18B6A1FAF067F0034BCF5 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CEE11E921FA45A0000A02A91 /* View */,
+				CEE11E931FA45A7B00A02A91 /* ViewController */,
+				CEE11E941FA45A8B00A02A91 /* Layout */,
+				CEE11E951FA45A9700A02A91 /* Model */,
+				CEFC3FDF1FA4CE8C0053698F /* Music */,
+			);
+			name = AudioPlayer;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CEF18B6B1FAF06BC0034BCF5 /* Login  */ = {
+			isa = PBXGroup;
+			children = (
+				CEF18B6F1FAF06E40034BCF5 /* VC */,
+				CEF18B6E1FAF06D40034BCF5 /* Model */,
+				CEF18B6D1FAF06CE0034BCF5 /* View */,
+				CEF18B6C1FAF06C60034BCF5 /* Layout */,
+			);
+			path = "Login ";
+			sourceTree = "<group>";
+		};
+		CEF18B6C1FAF06C60034BCF5 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		CEF18B6D1FAF06CE0034BCF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEF18B781FAF12490034BCF5 /* LoginStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEF18B6E1FAF06D40034BCF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEF18B721FAF078A0034BCF5 /* Login.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEF18B6F1FAF06E40034BCF5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				CEF18B7A1FAF13390034BCF5 /* ListTableViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		CEF18B7C1FAF1CB70034BCF5 /* NewLogin */ = {
+			isa = PBXGroup;
+			children = (
+				CEF18B801FAF1D180034BCF5 /* Model */,
+				CEF18B7F1FAF1D130034BCF5 /* Layout */,
+				CEF18B7E1FAF1D0B0034BCF5 /* VC */,
+				CEF18B7D1FAF1CF90034BCF5 /* View */,
+			);
+			path = NewLogin;
+			sourceTree = "<group>";
+		};
+		CEF18B7D1FAF1CF90034BCF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEF18B811FAF1D9D0034BCF5 /* LoginStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEF18B7E1FAF1D0B0034BCF5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				CEF18B871FAF50BB0034BCF5 /* LoginViewController.swift */,
+				CED4DD1C1FAFFF9400C7223D /* RegisterViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		CEF18B7F1FAF1D130034BCF5 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				CED4DD1E1FB0023B00C7223D /* RoundButton.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		CEF18B801FAF1D180034BCF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEF18B831FAF1F8A0034BCF5 /* UserData.plist */,
+				CEF18B851FAF48A50034BCF5 /* User.swift */,
+				CEF18B891FAF51BE0034BCF5 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,8 +292,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF18B731FAF078A0034BCF5 /* Login.plist in Resources */,
+				CEF18B841FAF1F8A0034BCF5 /* UserData.plist in Resources */,
 				CEE11E8B1FA459F900A02A91 /* LaunchScreen.storyboard in Resources */,
 				CEE11E881FA459F900A02A91 /* Assets.xcassets in Resources */,
+				CEF18B791FAF12490034BCF5 /* LoginStoryboard.storyboard in Resources */,
+				CEF18B821FAF1D9D0034BCF5 /* LoginStoryboard.storyboard in Resources */,
 				CEFC3FE01FA4CE8C0053698F /* Music in Resources */,
 				CEE11E861FA459F900A02A91 /* Main.storyboard in Resources */,
 			);
@@ -190,10 +313,16 @@
 				CEE11E831FA459F900A02A91 /* ViewController.swift in Sources */,
 				CEE11E9D1FA467FF00A02A91 /* CustomCollectionViewCell.swift in Sources */,
 				CEE11E811FA459F900A02A91 /* AppDelegate.swift in Sources */,
+				CED4DD1D1FAFFF9400C7223D /* RegisterViewController.swift in Sources */,
+				CEF18B7B1FAF13390034BCF5 /* ListTableViewController.swift in Sources */,
 				CEE11E9B1FA4672400A02A91 /* MusicManage.swift in Sources */,
+				CED4DD1F1FB0023B00C7223D /* RoundButton.swift in Sources */,
+				CEF18B861FAF48A50034BCF5 /* User.swift in Sources */,
 				CE72522A1FA7134000BE9C7E /* CustomFlowLayout.swift in Sources */,
 				CE4E20971FAABBD20093732B /* LyricsView.swift in Sources */,
+				CEF18B881FAF50BB0034BCF5 /* LoginViewController.swift in Sources */,
 				CEE11E991FA466AF00A02A91 /* AlbumInfo.swift in Sources */,
+				CEF18B8A1FAF51BE0034BCF5 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

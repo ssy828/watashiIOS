@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>나이</key>
+	<integer>27</integer>
+	<key>국적</key>
+	<array>
+		<string>대한민국</string>
+		<string>일본</string>
+		<string>프랑스</string>
+	</array>
+	<key>이름</key>
+	<string>신송이</string>
+</dict>
+</plist>
