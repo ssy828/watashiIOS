@@ -40,7 +40,7 @@
                                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="50m-jh-azw">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="50m-jh-azw">
                                                                 <rect key="frame" x="0.0" y="45" width="230" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="230" id="QR5-jx-XfY"/>
@@ -60,7 +60,7 @@
                                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="qSC-QZ-Wit">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="qSC-QZ-Wit">
                                                                 <rect key="frame" x="0.0" y="45" width="230" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="230" id="6ZL-ga-DJS"/>
@@ -212,14 +212,14 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임(2자에서 20자)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ol-Hj-rqW">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 재확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ol-Hj-rqW">
                                                                 <rect key="frame" x="0.0" y="174.5" width="300" height="51"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="300" id="LQv-bl-mLG"/>
                                                                 </constraints>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택사항" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBf-ka-R0N">
                                                                 <rect key="frame" x="0.0" y="232.5" width="300" height="51"/>
@@ -243,6 +243,9 @@
                                                                     <segment title="남성"/>
                                                                 </segments>
                                                                 <color key="tintColor" red="1" green="0.99676531550000003" blue="0.95913058520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="gender:" destination="Fuf-d4-Ymo" eventType="valueChanged" id="GD7-OW-yUg"/>
+                                                                </connections>
                                                             </segmentedControl>
                                                         </subviews>
                                                         <constraints>
@@ -263,6 +266,9 @@
                                                 <state key="normal" title="회원가입">
                                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signUpBtn:" destination="Fuf-d4-Ymo" eventType="touchUpInside" id="LBe-tn-88J"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -297,6 +303,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a33-7F-jrP"/>
                     </view>
+                    <connections>
+                        <outlet property="birthDayTF" destination="TM7-Ub-jR2" id="gD6-sh-vLT"/>
+                        <outlet property="emailTF" destination="63K-NV-Nm3" id="pDg-uH-62o"/>
+                        <outlet property="lastNameTF" destination="DiO-8H-PRR" id="O27-Om-D5N"/>
+                        <outlet property="nameTF" destination="dTT-Js-u6b" id="s8b-be-L2v"/>
+                        <outlet property="pwdTF" destination="5In-Wq-eEI" id="H2Z-gc-oI5"/>
+                        <outlet property="repeatPwdTF" destination="1Ol-Hj-rqW" id="kBs-54-Y2M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHD-3W-a2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
