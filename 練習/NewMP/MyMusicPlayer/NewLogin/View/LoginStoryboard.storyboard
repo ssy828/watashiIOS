@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yr1-Ls-ePi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6i2-c8-ROX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="nXt-f9-ssy">
             <objects>
-                <viewController storyboardIdentifier="Login" automaticallyAdjustsScrollViewInsets="NO" id="uXM-E9-hKp" customClass="LoginViewController" customModule="MyMusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uXM-E9-hKp" customClass="LoginViewController" customModule="MyMusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uqE-0a-Qqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,12 +152,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scI-de-KM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223.19999999999999" y="32.833583208395808"/>
+            <point key="canvasLocation" x="562.39999999999998" y="32.833583208395808"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="xjq-jH-QIA">
             <objects>
-                <viewController storyboardIdentifier="Register" id="Fuf-d4-Ymo" customClass="RegisterViewController" customModule="MyMusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Register" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fuf-d4-Ymo" customClass="RegisterViewController" customModule="MyMusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="keU-ta-6AM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,25 +314,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHD-3W-a2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="33"/>
+            <point key="canvasLocation" x="1288.8" y="32.833583208395808"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="uUJ-zL-i4D">
+        <scene sceneID="oob-dY-tBW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yr1-Ls-ePi" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6i2-c8-ROX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xaf-l1-p36">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kg8-lg-3eT">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="uXM-E9-hKp" kind="relationship" relationship="rootViewController" id="RGd-ZK-9q5"/>
+                        <segue destination="uXM-E9-hKp" kind="relationship" relationship="rootViewController" id="71k-64-7ba"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0nQ-q9-bOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rKg-Ek-Rzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-530" y="33"/>
+            <point key="canvasLocation" x="-230" y="33"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gev-9e-lSy">
+            <objects>
+                <navigationController id="Occ-0P-pHd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y5j-pc-Fqh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9Nr-0H-Jiq" kind="show" id="XDg-S5-dgN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="met-2g-Arl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="823"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lwp-7d-Voc">
+            <objects>
+                <viewController id="9Nr-0H-Jiq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ePz-sQ-ma3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="ZQV-Cg-TKr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zK4-UC-6Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="842"/>
         </scene>
     </scenes>
 </document>
