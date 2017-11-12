@@ -161,11 +161,11 @@
                     <connections>
                         <outlet property="btnStackView" destination="Z2e-bd-00Z" id="aEp-8w-Uka"/>
                         <outlet property="cashLB" destination="N2b-2B-SzG" id="n7B-38-wfa"/>
-                        <outlet property="oneHourAndHalfBtn" destination="SfX-le-e9Y" id="Vdg-wl-V7e"/>
-                        <outlet property="oneHourBtn" destination="Ved-2K-xtp" id="Wbb-7T-cn6"/>
+                        <outlet property="oneHourAndHalfBtn" destination="SfX-le-e9Y" id="YDB-Lk-hZw"/>
+                        <outlet property="oneHourBtn" destination="Ved-2K-xtp" id="dOW-Mu-MUD"/>
                         <outlet property="startBtn" destination="5pL-d2-y0c" id="AZX-lt-cyh"/>
-                        <outlet property="thirtyMinutesBtn" destination="MqW-I3-zyy" id="kxx-yd-tVm"/>
-                        <outlet property="twoHoursBtn" destination="Ida-SP-3Wn" id="hHV-Z7-55q"/>
+                        <outlet property="thirtyMinutesBtn" destination="MqW-I3-zyy" id="7r9-Q9-N0Z"/>
+                        <outlet property="twoHoursBtn" destination="Ida-SP-3Wn" id="F9a-dA-8Cx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4K-bv-JnU" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -26,8 +26,8 @@ class MainViewController: UIViewController {
     let timeOnTheThirdButton = 90
     let timeOnTheFourthButton = 120
     var userButtonTag: Int?
-
-    // 버튼 액션
+    
+    //  MARK: 버튼 액션
     @IBAction func buttonAction(_ sender: UIButton) {
         guard let buttonTag = ButtonTag(rawValue: sender.tag) else { return }
         switch buttonTag {
@@ -44,7 +44,10 @@ class MainViewController: UIViewController {
             seconds = minutesToSeconds(minutes: timeOnTheFourthButton)
             userButtonTag = 4
         case .startButton:
-            countdownLabelFrame(TimeInterval(seconds))
+            if startBtn.isHidden == false{
+                countdownLabelFrame(TimeInterval(seconds))
+                startBtn.isHidden = true
+            }
         }
     }
     
@@ -62,13 +65,13 @@ class MainViewController: UIViewController {
         
     }
     
-    // 분을 초로 계산하는 메소드
+    // MARK: 분을 초로 계산하는 메소드
     func minutesToSeconds(minutes minuteValue: Int) -> Int
     {
         return minuteValue * 60
     }
     
-    // CountdownLabel 프레임
+    // MARK: CountdownLabel 프레임
     func countdownLabelFrame(_ seconds: TimeInterval)
     {
         //카운드 다운 셋팅
@@ -79,11 +82,10 @@ class MainViewController: UIViewController {
         countDownlabel.countdownDelegate = self
         countDownlabel.start()
     }
-    
-    
 }
 
 extension MainViewController: CountdownLabelDelegate {
+    // MARK: countdownFinished()
     // 타이머가 끝나고 난 후
     func countdownFinished()
     {
@@ -104,7 +106,8 @@ extension MainViewController: CountdownLabelDelegate {
         default:
             break
         }
-        cashLB.text = "\(totalTime)"
+        
+        cashLB.text = "\(cash)"
         UserDefaults.standard.set(cash, forKey: userCash)
         UserDefaults.standard.set(totalTime, forKey: userTotalTime)
         
@@ -112,8 +115,9 @@ extension MainViewController: CountdownLabelDelegate {
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: false, completion: nil)
+        startBtn.isHidden = false // 메소드가 끝나면 버튼 보이기
     }
-
+    
 }
 
 // MARK: ENUM
@@ -124,6 +128,5 @@ enum ButtonTag: Int
     case thirdButton = 3
     case fourthButton = 4
     case startButton = 0
-    
 }
 
