@@ -18,16 +18,12 @@ class SettingTableViewController: UITableViewController {
     @IBAction func logOutButton(_ sender: Any)
     {
         // 알림창
-        let alert = UIAlertController(title: "로그아웃", message: "정말 로그아웃하시겠습니까?", preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "아니오", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "예", style: .destructive, handler: { _ in
-            // 이곳을 누르면 동작 하는 코드
-//            try! Auth.auth().signOut()
-            // Login화면으로 돌아감
+        let alertController = Alert.showAlertController(title: "로그아웃", message: "정말 로그아웃하시겠습니까?", actionStyle: .destructive, cancelButton: true) { _ in
+            try! Auth.auth().signOut()
             self.performSegue(withIdentifier: "Login", sender: nil)
-        }))
-        present(alert, animated: true, completion: nil)
+        }
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     // MARK: Life Cycle

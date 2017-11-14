@@ -22,6 +22,7 @@
 		237E08DF1FB5D01F004551B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08DE1FB5D01F004551B3 /* CustomButton.swift */; };
 		237E08ED1FB6057D004551B3 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08EA1FB6057D004551B3 /* SettingTableViewController.swift */; };
 		237E08EE1FB6057D004551B3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237E08EC1FB6057D004551B3 /* Settings.storyboard */; };
+		CE41BCBD1FBB18D1001763BA /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41BCBC1FBB18D1001763BA /* Alert.swift */; };
 		CEAB870A1FB62D66006B1772 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB87091FB62D66006B1772 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		3F942D2CA8DE741B29DE62EB /* Pods-Hackaton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.release.xcconfig"; sourceTree = "<group>"; };
 		5180F5CB1414F88BC4DAF0E6 /* Pods-Hackaton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.debug.xcconfig"; sourceTree = "<group>"; };
 		BA63A2608D4019999D812D1B /* Pods_Hackaton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackaton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE41BCBC1FBB18D1001763BA /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CEAB87091FB62D66006B1772 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				231816531FB585F500E69EB3 /* Main.storyboard */,
+				CE41BCBC1FBB18D1001763BA /* Alert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				231816501FB585F500E69EB3 /* AppDelegate.swift in Sources */,
 				CEAB870A1FB62D66006B1772 /* RoundButton.swift in Sources */,
 				237E08DF1FB5D01F004551B3 /* CustomButton.swift in Sources */,
+				CE41BCBD1FBB18D1001763BA /* Alert.swift in Sources */,
 				231816661FB599F100E69EB3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
