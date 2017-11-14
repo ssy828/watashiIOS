@@ -3,6 +3,9 @@ import UIKit
 import Firebase
 import CountdownLabel
 
+let userCash = "cash"
+let userTotalTime = "totalTime"
+
 // MARK: 메인 부분
 class MainViewController: UIViewController {
     
@@ -10,17 +13,12 @@ class MainViewController: UIViewController {
     @IBOutlet weak var btnStackView: UIStackView!
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var cashLB: UILabel!
-    @IBOutlet weak var thirtyMinutesBtn: UIButton!
-    @IBOutlet weak var oneHourBtn: UIButton!
-    @IBOutlet weak var oneHourAndHalfBtn: UIButton!
-    @IBOutlet weak var twoHoursBtn: UIButton!
+    @IBOutlet weak var countDownLB : CountdownLabel!
     
     // MARK: 프로퍼티
     var seconds  = 0
     var cash = 0
     var totalTime = 0
-    let userCash = "cash"
-    let userTotalTime = "TotalTime"
     let timeOnTheFirstButton = 30
     let timeOnTheSecondButton = 60
     let timeOnTheThirdButton = 90
@@ -28,6 +26,7 @@ class MainViewController: UIViewController {
     var userButtonTag: Int?
     
     //  MARK: 버튼 액션
+    // 버튼을 타이머가 시작되면 없애는 부분? 생각
     @IBAction func buttonAction(_ sender: UIButton) {
         guard let buttonTag = ButtonTag(rawValue: sender.tag) else { return }
         switch buttonTag {
@@ -45,7 +44,7 @@ class MainViewController: UIViewController {
             userButtonTag = 4
         case .startButton:
             if startBtn.isHidden == false{
-                countdownLabelFrame(TimeInterval(seconds))
+                timerRunning(TimeInterval(seconds))
                 startBtn.isHidden = true
             }
         }
@@ -71,17 +70,14 @@ class MainViewController: UIViewController {
         return minuteValue * 60
     }
     
-    // MARK: CountdownLabel 프레임
-    func countdownLabelFrame(_ seconds: TimeInterval)
+    // MARK: 카운트다운실행
+    func timerRunning(_ seconds: TimeInterval)
     {
-        //카운드 다운 셋팅
-        let countDownlabel = CountdownLabel(frame: CGRect(x: 0, y: btnStackView.frame.maxY, width: view.frame.width, height: startBtn.frame.minY - btnStackView.frame.maxY), minutes: seconds)
-        countDownlabel.textAlignment = .center
-        countDownlabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        self.view.addSubview(countDownlabel)
-        countDownlabel.countdownDelegate = self
-        countDownlabel.start()
+        countDownLB.setCountDownTime(minutes: seconds)
+        countDownLB.countdownDelegate = self
+        countDownLB.start()
     }
+
 }
 
 extension MainViewController: CountdownLabelDelegate {
@@ -113,7 +109,6 @@ extension MainViewController: CountdownLabelDelegate {
         
         let alertController = Alert.showAlertController(title: "CASH", message: "\(cash)", actionStyle: UIAlertActionStyle.default, cancelButton: false, complition: nil)
         present(alertController, animated: true, completion: nil)
-       
         startBtn.isHidden = false // 메소드가 끝나면 버튼 보이기
     }
     

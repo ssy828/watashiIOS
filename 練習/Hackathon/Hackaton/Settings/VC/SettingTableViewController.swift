@@ -22,7 +22,6 @@ class SettingTableViewController: UITableViewController {
             try! Auth.auth().signOut()
             self.performSegue(withIdentifier: "Login", sender: nil)
         }
-        
         present(alertController, animated: true, completion: nil)
     }
     
@@ -35,8 +34,8 @@ class SettingTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         userIdLB.text = UserDefaults.standard.string(forKey: userIdForKey)
-        guard let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return }
-        versionLB.text = version
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        versionLB.text = version ?? "버전 가져오기 실패!"
     }
 }
 

@@ -13,7 +13,7 @@
 		CED8A6951FB9711E00F574C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED8A6931FB9711E00F574C7 /* Main.storyboard */; };
 		CED8A6971FB9711E00F574C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED8A6961FB9711E00F574C7 /* Assets.xcassets */; };
 		CED8A69A1FB9711E00F574C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED8A6981FB9711E00F574C7 /* LaunchScreen.storyboard */; };
-		CED8A6A21FB971E600F574C7 /* CustomPV.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8A6A11FB971E600F574C7 /* CustomPV.swift */; };
+		CED8A6A21FB971E600F574C7 /* TestCircularPV.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8A6A11FB971E600F574C7 /* TestCircularPV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		CED8A6961FB9711E00F574C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED8A6991FB9711E00F574C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CED8A69B1FB9711E00F574C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CED8A6A11FB971E600F574C7 /* CustomPV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPV.swift; sourceTree = "<group>"; };
+		CED8A6A11FB971E600F574C7 /* TestCircularPV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCircularPV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 			children = (
 				CED8A68F1FB9711E00F574C7 /* AppDelegate.swift */,
 				CED8A6911FB9711E00F574C7 /* ViewController.swift */,
-				CED8A6A11FB971E600F574C7 /* CustomPV.swift */,
+				CED8A6A11FB971E600F574C7 /* TestCircularPV.swift */,
 				CED8A6931FB9711E00F574C7 /* Main.storyboard */,
 				CED8A6961FB9711E00F574C7 /* Assets.xcassets */,
 				CED8A6981FB9711E00F574C7 /* LaunchScreen.storyboard */,
@@ -220,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED8A6A21FB971E600F574C7 /* CustomPV.swift in Sources */,
+				CED8A6A21FB971E600F574C7 /* TestCircularPV.swift in Sources */,
 				CED8A6921FB9711E00F574C7 /* ViewController.swift in Sources */,
 				CED8A6901FB9711E00F574C7 /* AppDelegate.swift in Sources */,
 			);
