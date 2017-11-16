@@ -63,7 +63,7 @@ class SignupViewController: UIViewController {
                     //                        }
                     //                    })
                     //                    alertSheet.addAction(okAction)
-                    let alertController = Alert.showAlertController(title: "가입완료", message: "가입이 성공적으로\n이루어졌습니다", actionStyle: .default, cancelButton: false, complition: { _ in
+                    let alertController = Alert.showAlertController(title: "가입완료", message: "가입이 성공적으로\n이루어졌습니다", actionStyle: .default, cancelButton: false, completion: { _ in
                         let mainstoryBoard = UIStoryboard(name: "Main", bundle: nil)
                         if let mainVC = mainstoryBoard.instantiateViewController(withIdentifier: "Main") as? UINavigationController {
                             self.present(mainVC, animated: true, completion: nil)
@@ -78,7 +78,7 @@ class SignupViewController: UIViewController {
                     //                    let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
                     //                    alertSheet.addAction(okAction)
                     if let error = errorMsg {
-                        let alertController = Alert.showAlertController(title: "경고", message: error, cancelButton: false, complition: nil)
+                        let alertController = Alert.showAlertController(title: "경고", message: error, cancelButton: false, completion: nil)
                         self.present(alertController, animated: true, completion: nil)
                     }
                     
@@ -92,7 +92,7 @@ class SignupViewController: UIViewController {
         //        let OkAction = UIAlertAction(title: "확인", style: .default, handler: nil)
         //        alertSheet.addAction(OkAction)
         //        present(alertSheet, animated: true, completion: nil)
-        let alertController = Alert.showAlertController(title: "비밀번호 오류", message: "비밀번호가 동일하지 않습니다.", cancelButton: false, complition: nil)
+        let alertController = Alert.showAlertController(title: "비밀번호 오류", message: "비밀번호가 동일하지 않습니다.", cancelButton: false, completion: nil)
         self.present(alertController, animated: true, completion: nil)
     }
 }

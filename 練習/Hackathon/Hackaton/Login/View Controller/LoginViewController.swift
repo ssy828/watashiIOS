@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
                 //                })
                 //                alertSheet.addAction(okAction)
                 //                self.present(alertSheet, animated: true, completion: nil)
-                let alertController = Alert.showAlertController(title: "로그인성공", message: "로그인 성공", cancelButton: false, complition: { _ in
+                let alertController = Alert.showAlertController(title: "로그인성공", message: "로그인 성공", cancelButton: false, completion: { _ in
                     let mainstoryBoard = UIStoryboard(name: "Main", bundle: nil)
                     if let mainVC = mainstoryBoard.instantiateViewController(withIdentifier: "Main") as? UINavigationController {
                         self.present(mainVC, animated: true, completion: nil)
@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
                 //                alertSheet.addAction(okAction)
                 //                self.present(alertSheet, animated: true, completion: nil)
                 if let error = errorMsg {
-                    let alertController = Alert.showAlertController(title: "경고", message: error, cancelButton: false, complition: nil)
+                    let alertController = Alert.showAlertController(title: "경고", message: error, cancelButton: false, completion: nil)
                     self.present(alertController, animated: true, completion: nil)
                 }
             }

@@ -19,8 +19,6 @@ class RegisterViewController: UIViewController {
     @IBAction func gender(_ sender: UISegmentedControl) {
         
     }
-    
-    
    
     // MARK: Life of Cycle
     override func viewDidLoad() {
@@ -28,12 +26,7 @@ class RegisterViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-}
-
- // MARK: 회원가입버튼 누를 경우
-extension RegisterViewController
-{
-   
+    // MARK: 회원가입 누른 경우!
     @IBAction func signUpBtn(_ sender: RoundButton) {
         
         guard let userLastName = lastNameTF.text else { return }
@@ -63,15 +56,11 @@ extension RegisterViewController
         storeData(userLastName, forKey: "userLastName")
         storeData(userRepeatPwd, forKey: "repeatPwd")
         storeData(userBDay, forKey: "userBDay")
-        // ???
+        
+        
         UserDefaults.standard.synchronize()
-        
+       
         // 가입완료 알림창
-
-//        registerAlert.addAction(okAction)
-//        self.present(registerAlert, animated: true, completion: nil)
-        
-          // 가입완료 알림창
         displayAlertMSG(userMessage: "가입을 축하합니다") { (Okaction) in
             //self.dismiss(animated: true, completion: nil)
             // dismiss는 뷰컨트롤러끼리 할 때!
@@ -88,12 +77,6 @@ extension RegisterViewController
         present(alert, animated: true, completion: nil)
         
     }
-    
-}
-
-// MARK: 메소드
-extension RegisterViewController
-{
     // MARK: 알림창 함수
     func displayAlertMSG(_ userMessage: String)
     {
@@ -109,7 +92,7 @@ extension RegisterViewController
     {
         let alertWindow = UIAlertController(title: "알림", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: handler)
-
+        
         alertWindow.addAction(okAction)
         self.present(alertWindow, animated: true, completion: nil)
     }
@@ -123,3 +106,6 @@ extension RegisterViewController
     }
     
 }
+
+
+

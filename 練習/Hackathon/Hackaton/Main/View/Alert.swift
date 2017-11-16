@@ -1,6 +1,6 @@
 
-
 import UIKit
+
 // 알림창
 struct Alert
 {
@@ -8,13 +8,13 @@ struct Alert
                                     message: String?,
                                     actionStyle: UIAlertActionStyle = UIAlertActionStyle.default,
                                     cancelButton: Bool,
-                                    complition: ((UIAlertAction) -> Void)? ) -> UIAlertController
+                                    completion: ((UIAlertAction) -> Void)? ) -> UIAlertController
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "확인",
                                      style: actionStyle,
-                                     handler: complition)
+                                     handler: completion)
         alert.addAction(okAction)
         if cancelButton == true
         {

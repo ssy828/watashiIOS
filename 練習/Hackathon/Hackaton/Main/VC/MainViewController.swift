@@ -107,7 +107,7 @@ extension MainViewController: CountdownLabelDelegate {
         UserDefaults.standard.set(cash, forKey: userCash)
         UserDefaults.standard.set(totalTime, forKey: userTotalTime)
         
-        let alertController = Alert.showAlertController(title: "CASH", message: "\(cash)", actionStyle: UIAlertActionStyle.default, cancelButton: false, complition: nil)
+        let alertController = Alert.showAlertController(title: "CASH", message: "\(cash)", actionStyle: UIAlertActionStyle.default, cancelButton: false, completion: nil)
         present(alertController, animated: true, completion: nil)
         startBtn.isHidden = false // 메소드가 끝나면 버튼 보이기
     }
