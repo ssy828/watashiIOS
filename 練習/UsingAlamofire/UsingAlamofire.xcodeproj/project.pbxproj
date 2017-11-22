@@ -16,6 +16,7 @@
 		CE76BB101FC1BB6600F4813A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76BB0F1FC1BB6600F4813A /* Utils.swift */; };
 		CE76BB121FC1C1FA00F4813A /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76BB111FC1C1FA00F4813A /* JoinVC.swift */; };
 		CE76BB141FC1C41A00F4813A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76BB131FC1C41A00F4813A /* CustomCell.swift */; };
+		CEEA3E771FC3FFBA0083B3AD /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA3E761FC3FFBA0083B3AD /* NetWork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CE76BB0F1FC1BB6600F4813A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CE76BB111FC1C1FA00F4813A /* JoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
 		CE76BB131FC1C41A00F4813A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		CEEA3E761FC3FFBA0083B3AD /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		E4C929E552B952B80858E233 /* Pods-UsingAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsingAlamofire.release.xcconfig"; path = "Pods/Target Support Files/Pods-UsingAlamofire/Pods-UsingAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				CE4157B41FC1B50A002D7459 /* Main.storyboard */,
 				CE76BB131FC1C41A00F4813A /* CustomCell.swift */,
 				CE76BB0F1FC1BB6600F4813A /* Utils.swift */,
+				CEEA3E761FC3FFBA0083B3AD /* NetWork.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			files = (
 				CE4157C31FC1B533002D7459 /* MainViewController.swift in Sources */,
 				CE4157B11FC1B50A002D7459 /* AppDelegate.swift in Sources */,
+				CEEA3E771FC3FFBA0083B3AD /* NetWork.swift in Sources */,
 				CE76BB141FC1C41A00F4813A /* CustomCell.swift in Sources */,
 				CE76BB101FC1BB6600F4813A /* Utils.swift in Sources */,
 				CE76BB121FC1C1FA00F4813A /* JoinVC.swift in Sources */,
