@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uCH-rt-Wzx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post Write View Controller-->
+        <scene sceneID="VNw-R9-DkG">
+            <objects>
+                <viewController storyboardIdentifier="PostWrite" id="uCH-rt-Wzx" customClass="PostWriteViewController" customModule="TestInstaGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wiq-Pw-mUa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9pS-z4-Vrd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="281.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9pS-z4-Vrd" secondAttribute="height" multiplier="16:12" id="WZX-gk-ShR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dl4-32-XW4">
+                                <rect key="frame" x="164.5" y="371.5" width="46" height="30"/>
+                                <state key="normal" title="gallary"/>
+                                <connections>
+                                    <action selector="handleBtn:" destination="uCH-rt-Wzx" eventType="touchUpInside" id="zc3-qD-dYK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-wx-Ql0">
+                                <rect key="frame" x="164" y="409.5" width="47" height="30"/>
+                                <state key="normal" title="upload"/>
+                                <connections>
+                                    <action selector="handleBtn:" destination="uCH-rt-Wzx" eventType="touchUpInside" id="hmm-xs-1sa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dl4-32-XW4" firstAttribute="centerX" secondItem="LBh-Li-q2G" secondAttribute="centerX" id="6Yt-rf-C9U"/>
+                            <constraint firstItem="bsa-wx-Ql0" firstAttribute="top" secondItem="Dl4-32-XW4" secondAttribute="bottom" constant="8" id="Ogb-1I-Icv"/>
+                            <constraint firstItem="bsa-wx-Ql0" firstAttribute="centerX" secondItem="LBh-Li-q2G" secondAttribute="centerX" id="f26-ef-1NK"/>
+                            <constraint firstItem="9pS-z4-Vrd" firstAttribute="top" secondItem="LBh-Li-q2G" secondAttribute="top" id="mfT-ui-8I9"/>
+                            <constraint firstItem="9pS-z4-Vrd" firstAttribute="trailing" secondItem="LBh-Li-q2G" secondAttribute="trailing" id="nX2-Kl-y5I"/>
+                            <constraint firstItem="Dl4-32-XW4" firstAttribute="top" secondItem="9pS-z4-Vrd" secondAttribute="bottom" constant="70" id="nxX-S1-Jfb"/>
+                            <constraint firstItem="9pS-z4-Vrd" firstAttribute="leading" secondItem="LBh-Li-q2G" secondAttribute="leading" id="zFY-mX-cBV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LBh-Li-q2G"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="9pS-z4-Vrd" id="hHK-qQ-SlM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5X-TD-H0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.59999999999999" y="-119.1904047976012"/>
+        </scene>
+    </scenes>
+</document>

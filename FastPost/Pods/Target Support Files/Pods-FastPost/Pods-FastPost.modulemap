@@ -1,6 +1,0 @@
-framework module Pods_FastPost {
-  umbrella header "Pods-FastPost-umbrella.h"
-
-  export *
-  module * { export * }
-}
