@@ -8,6 +8,7 @@ import SnapKit
 class PostsTabViewController: UIViewController {
     weak var tableView: UITableView?
     var posts = [Post]()
+    var isLoading = false
     
     lazy var reference : DatabaseReference = Database.database().reference()
     lazy var storage = Storage.storage()
@@ -19,13 +20,7 @@ class PostsTabViewController: UIViewController {
         let tableView = UITableView()
         self.tableView = tableView
         view.addSubview(tableView)
-        //        tableView.translatesAutoresizingMaskIntoConstraints = false
-        //
-        //        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        //        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        //        tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        //        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        //
+ 
         tableView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.equalTo(view.safeAreaLayoutGuide)
@@ -35,56 +30,57 @@ class PostsTabViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib.init(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: "postCell")
-        //tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: "postCell")
+        tableView.register(UINib(nibName: "PostEmptyTableViewCell", bundle: nil), forCellReuseIdentifier: "emptyCell")
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 40
         tableView.separatorInset = .zero
         
-        reference.child("posts").observeSingleEvent(of: DataEventType.value) { dataSnapshot in
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(handleRefreshControl(_:)), for: .valueChanged)
+        
+        tableView.refreshControl?.beginRefreshing()
+        load(completeHandler: { self.tableView?.refreshControl?.endRefreshing() })
+    }
+    
+    @objc func handleRefreshControl(_ sender: UIRefreshControl){
+        load(completeHandler: { self.tableView?.refreshControl?.endRefreshing() })
+    }
+    
+    func load(completeHandler: (() -> Void)? = nil){
+        isLoading = true
+        posts.removeAll()
+        reference.child("posts").queryLimited(toFirst: 100).observeSingleEvent(of: DataEventType.value) { dataSnapshot in
             let postsDict = dataSnapshot.value as? [String: [String:Any]] ?? [:]
             for (key, postDic) in postsDict {
-                var post = Post()
-                post.key = key
-                if let title = postDic["title"] as? String {
-                    post.title = title
-                }
-                if let imageUrl = postDic["imageUrl"] as? String {
-                    post.imageUrl = imageUrl
-                }
-                if let uid = postDic["uid"] as? String {
-                    post.uid = uid
-                }
-                self.posts.append(post)
+                self.posts.append(Post(key: key, dic: postDic))
             }
-            tableView.reloadData()
+            self.isLoading = false
+            self.tableView?.reloadData()
+            completeHandler?()
         }
-        
-        //TODO load
     }
+    
 }
 // MARK: UITableViewDataSource
 extension PostsTabViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        let count = posts.count
+        return (isLoading) ? 0 : (count > 0) ? count : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let index = indexPath.row
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath)
-        if let cell = cell as? PostTableViewCell {
-            let post = posts[index]
-
-            cell.imageView1?.sd_setImage(with: URL(string: post.imageUrl))
-            //cell.userImageView?.image = storage.reference(forURL: post.imageUrl).
-            cell.userNicknameLabel?.text = "닉네임"
-            cell.imageScrollView?.backgroundColor = .gray
-            cell.detailLabel?.text = post.title
-
+        if posts.count == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "emptyCell", for: indexPath)
+        } else {
+            let index = indexPath.row
+            let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath)
+            if let cell = cell as? PostTableViewCell {
+                cell.setData(post: posts[index])
+            }
+            return cell
         }
-        
-        return cell
     }
     
 }
@@ -100,8 +96,35 @@ struct User{
 
 struct Post{
     var key: String?
-    var title: String = ""
-    var imageUrl: String = ""
+    var userNickname: String = ""
+    var imageUrls: [String] = []
     var uid: String = ""
+    var date: Date?
+    
+    init() {}
+    
+    init(key: String, dic: [String: Any]){
+        if let userNickname = dic["userNickname"] as? String {
+            self.userNickname = userNickname
+        }
+        if let imageUrls = dic["imageUrls"] as? [String] {
+            self.imageUrls = imageUrls
+        }
+        if let uid = dic["uid"] as? String {
+            self.uid = uid
+        }
+        if let timestamp = dic["timestamp"] as? Int{
+            self.date = Date(timeIntervalSince1970: TimeInterval(timestamp / 1000))
+        }
+    }
+    
+    var dictionary: [String:Any] {
+        var dic = [String:Any]()
+        dic["userNickname"] = userNickname
+        dic["imageUrls"] = imageUrls
+        dic["uid"] = uid
+        dic["timestamp"] = ServerValue.timestamp()
+        return dic
+    }
 }
 

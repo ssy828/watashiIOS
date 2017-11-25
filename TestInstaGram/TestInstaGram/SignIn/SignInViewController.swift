@@ -38,6 +38,15 @@ class SignInViewController: UIViewController {
         return textField
     }()
     
+    var nicknameTF: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "닉네임을 입력해주세요"
+        textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        return textField
+    }()
+    
     var signUpBtn: UIButton = {
         let btn = UIButton()
         btn.setTitle("회원가입", for: .normal)
@@ -108,13 +117,15 @@ class SignInViewController: UIViewController {
             $0.top.equalTo(logo.snp.bottom).offset(20)
             $0.left.equalTo(contentView).offset(10)
             $0.right.equalTo(contentView).offset(-10)
-            $0.bottom.equalTo(contentView).offset(-100)
+            $0.bottom.equalTo(contentView).offset(-80)
         }
         // 스택뷰 위에 필드와 버튼 올림
         stackView.addArrangedSubview(emailTF)
         stackView.addArrangedSubview(passwordTF)
         stackView.addArrangedSubview(rePasswordTF)
+        stackView.addArrangedSubview(nicknameTF)
         stackView.addArrangedSubview(signUpBtn)
+        
         
         signUpBtn.addTarget(self, action: #selector(signUp(_:)), for: .touchUpInside)
         
@@ -136,6 +147,12 @@ class SignInViewController: UIViewController {
         } else if rePasswordTF.isFirstResponder {
             rePasswordTF.resignFirstResponder()
         }
+        /*let view = stackView.subviews[4]
+        if stackView.arrangedSubviews.contains(view) {
+            stackView.removeArrangedSubview(view)
+        } else {
+            stackView.addArrangedSubview(view)
+        }*/
     }
     
     // MARK: signUp 버튼
@@ -153,6 +170,10 @@ class SignInViewController: UIViewController {
             UIAlertController.present(target: self, msg: "다시 비밀번호를 입력해주세요.")
             return
         }
+        guard let nickName = nicknameTF.text, !nickName.isEmpty else {
+            UIAlertController.present(target: self, msg: "닉네임을 입력해주세요.")
+            return
+        }
         
         if pwd != rePwd
         {
@@ -160,9 +181,13 @@ class SignInViewController: UIViewController {
         }else{
             Auth.auth().createUser(withEmail: account, password: pwd, completion: {[weak self] (user, error) in
                 guard let `self` = self else { return }
-                if error == nil && user != nil{
-                    let userDic: [String: Any] = ["user": account]
-                    self.reference.child(user!.uid).setValue(userDic)
+                if error == nil, let user = user{
+                    let profileChangeRequest = user.createProfileChangeRequest()
+                    profileChangeRequest.displayName = nickName
+                    profileChangeRequest.commitChanges(completion: nil)
+                    
+                    let userDic: [String: Any] = ["user": ["email": user.email, "nickname":nickName]]
+                    self.reference.child(user.uid).setValue(userDic)
                     
                     UIAlertController.present(target: self, msg: "가입되었습니다.") { _ in
                         self.performSegue(withIdentifier: "unwindSegueSignInToLogin", sender: nil)

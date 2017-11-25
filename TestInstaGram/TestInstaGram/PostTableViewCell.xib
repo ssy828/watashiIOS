@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,26 +32,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ho-sr-hjY">
+                        <rect key="frame" x="317" y="28.5" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8B-cz-eee">
                         <rect key="frame" x="0.0" y="77" width="375" height="281.5"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EgO-Ss-fm1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3pz-oS-Dzc">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="i8B-cz-eee" secondAttribute="height" multiplier="16:12" id="5PK-8g-LK3"/>
-                            <constraint firstAttribute="bottom" secondItem="EgO-Ss-fm1" secondAttribute="bottom" id="6Bw-4P-aHT"/>
-                            <constraint firstItem="EgO-Ss-fm1" firstAttribute="top" secondItem="i8B-cz-eee" secondAttribute="top" id="DOC-QQ-1jA"/>
-                            <constraint firstItem="EgO-Ss-fm1" firstAttribute="width" secondItem="i8B-cz-eee" secondAttribute="width" id="ZJ8-oe-KDp"/>
-                            <constraint firstItem="EgO-Ss-fm1" firstAttribute="height" secondItem="i8B-cz-eee" secondAttribute="height" id="pJn-w1-xer"/>
-                            <constraint firstItem="EgO-Ss-fm1" firstAttribute="leading" secondItem="i8B-cz-eee" secondAttribute="leading" id="yAO-1O-55r"/>
-                            <constraint firstAttribute="trailing" secondItem="EgO-Ss-fm1" secondAttribute="trailing" id="zQ1-ye-neZ"/>
                         </constraints>
                     </scrollView>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGn-aq-444">
@@ -112,6 +101,7 @@
                     <constraint firstItem="eCl-G8-3bN" firstAttribute="top" secondItem="HGn-aq-444" secondAttribute="bottom" constant="7.5" id="7tD-NJ-qNn"/>
                     <constraint firstItem="ljr-ji-LLa" firstAttribute="top" secondItem="9qe-4O-CIx" secondAttribute="top" constant="16" id="AQq-Il-ZEV"/>
                     <constraint firstItem="Fli-cY-16o" firstAttribute="centerX" secondItem="9qe-4O-CIx" secondAttribute="centerX" id="Eiy-DW-scE"/>
+                    <constraint firstItem="0Ho-sr-hjY" firstAttribute="leading" secondItem="9qe-4O-CIx" secondAttribute="leading" constant="317" id="Fzg-4q-LW7"/>
                     <constraint firstItem="zfH-FK-ua5" firstAttribute="centerY" secondItem="HGn-aq-444" secondAttribute="centerY" id="Mr0-r1-Jeh"/>
                     <constraint firstItem="HGn-aq-444" firstAttribute="top" secondItem="i8B-cz-eee" secondAttribute="bottom" constant="16" id="Pr3-HT-C3L"/>
                     <constraint firstItem="eCl-G8-3bN" firstAttribute="leading" secondItem="HGn-aq-444" secondAttribute="leading" id="Pw0-Yd-R1f"/>
@@ -123,24 +113,20 @@
                     <constraint firstAttribute="bottom" secondItem="eCl-G8-3bN" secondAttribute="bottom" constant="16" id="bSm-gw-sof"/>
                     <constraint firstAttribute="trailing" secondItem="i8B-cz-eee" secondAttribute="trailing" id="c52-3T-m2q"/>
                     <constraint firstItem="i8B-cz-eee" firstAttribute="leading" secondItem="9qe-4O-CIx" secondAttribute="leading" id="qzD-SF-W96"/>
+                    <constraint firstItem="0Ho-sr-hjY" firstAttribute="centerY" secondItem="8X2-St-5eg" secondAttribute="centerY" id="w0H-tO-vvi"/>
                     <constraint firstAttribute="trailing" secondItem="zfH-FK-ua5" secondAttribute="trailing" constant="16" id="y1W-9d-xKM"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="dateLabel" destination="0Ho-sr-hjY" id="Hkr-0j-Ome"/>
                 <outlet property="detailLabel" destination="eCl-G8-3bN" id="B4a-Jx-hZi"/>
                 <outlet property="imageScrollView" destination="i8B-cz-eee" id="x3D-CP-Rki"/>
-                <outlet property="imageView1" destination="3pz-oS-Dzc" id="81y-uj-5Uf"/>
                 <outlet property="likeButton" destination="onk-hx-GWf" id="JMI-p8-Ntn"/>
                 <outlet property="userImageView" destination="ljr-ji-LLa" id="sLV-W5-rOv"/>
                 <outlet property="userNicknameLabel" destination="8X2-St-5eg" id="UOL-1T-rb8"/>
             </connections>
             <point key="canvasLocation" x="-105.5" y="31.5"/>
         </tableViewCell>
-        <stackView opaque="NO" contentMode="scaleToFill" id="x83-Yc-z9n">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <viewLayoutGuide key="safeArea" id="saH-KT-Sv4"/>
-        </stackView>
     </objects>
     <resources>
         <image name="ic_bookmark_border" width="24" height="24"/>

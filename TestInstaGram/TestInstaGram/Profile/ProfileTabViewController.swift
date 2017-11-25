@@ -1,12 +1,10 @@
 //
 //  ProfileTabViewController.swift
 //  TestInstaGram
-//
-//  Created by SONGYEE SHIN on 2017. 11. 22..
-//  Copyright © 2017년 SONGYEE SHIN. All rights reserved.
-//
+
 
 import UIKit
+import SwiftKeychainWrapper
 
 class ProfileTabViewController: UIViewController {
 
@@ -15,6 +13,12 @@ class ProfileTabViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func test2(_ sender: UIButton){
+        KeychainWrapper.standard.removeObject(forKey: "account")
+        performSegue(withIdentifier: "unwindSegueProfileToSplash", sender: self)
+    }
+    
     
     @IBAction func test(_ sender: UIButton){
         let postVC = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "PostWrite")

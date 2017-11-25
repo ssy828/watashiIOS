@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		758A7383B52F5376520628C8 /* Pods_TestInstaGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88E7CBB30C4A2CD5826CCD5 /* Pods_TestInstaGram.framework */; };
+		CE1DEFF01FC8420000BCF306 /* PostEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DEFEE1FC8420000BCF306 /* PostEmptyTableViewCell.swift */; };
+		CE1DEFF11FC8420000BCF306 /* PostEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1DEFEF1FC8420000BCF306 /* PostEmptyTableViewCell.xib */; };
 		CE3BC1B21FC284D000BB6DE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BC1B11FC284D000BB6DE1 /* AppDelegate.swift */; };
 		CE3BC1B41FC284D000BB6DE1 /* PostsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BC1B31FC284D000BB6DE1 /* PostsTabViewController.swift */; };
 		CE3BC1B71FC284D000BB6DE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3BC1B51FC284D000BB6DE1 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		16A9DCCDFC44C4A68E6BD8BB /* Pods-TestInstaGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestInstaGram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestInstaGram/Pods-TestInstaGram.debug.xcconfig"; sourceTree = "<group>"; };
 		C88E7CBB30C4A2CD5826CCD5 /* Pods_TestInstaGram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestInstaGram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1DEFEE1FC8420000BCF306 /* PostEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEmptyTableViewCell.swift; sourceTree = "<group>"; };
+		CE1DEFEF1FC8420000BCF306 /* PostEmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostEmptyTableViewCell.xib; sourceTree = "<group>"; };
 		CE3BC1AE1FC284D000BB6DE1 /* TestInstaGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestInstaGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3BC1B11FC284D000BB6DE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3BC1B31FC284D000BB6DE1 /* PostsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTabViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		CE3BC1B01FC284D000BB6DE1 /* TestInstaGram */ = {
 			isa = PBXGroup;
 			children = (
+				CE7A21AA1FC58447008A2407 /* PostTableViewCell.xib */,
 				CEDF65C41FC5CF0A004AA710 /* Extension */,
 				CEDF65C31FC5CEFF004AA710 /* PostWrite */,
 				CEDF65C01FC5CEA3004AA710 /* Profile */,
@@ -153,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				CE7A21AC1FC58722008A2407 /* PostTableViewCell.swift */,
+				CE1DEFEE1FC8420000BCF306 /* PostEmptyTableViewCell.swift */,
+				CE1DEFEF1FC8420000BCF306 /* PostEmptyTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,7 +167,6 @@
 		CEDF65C21FC5CEC4004AA710 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				CE7A21AA1FC58447008A2407 /* PostTableViewCell.xib */,
 				CE3BC1B31FC284D000BB6DE1 /* PostsTabViewController.swift */,
 			);
 			path = VC;
@@ -248,6 +254,7 @@
 				CE7A21AB1FC58447008A2407 /* PostTableViewCell.xib in Resources */,
 				CE3BC1B71FC284D000BB6DE1 /* Main.storyboard in Resources */,
 				CE7A21B31FC59852008A2407 /* Post.storyboard in Resources */,
+				CE1DEFF11FC8420000BCF306 /* PostEmptyTableViewCell.xib in Resources */,
 				CEDF65C61FC5D079004AA710 /* Assets.xcassets in Resources */,
 				CE7A21A91FC56B16008A2407 /* GoogleService-Info.plist in Resources */,
 			);
@@ -280,8 +287,10 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestInstaGram/Pods-TestInstaGram-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -289,8 +298,10 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -331,6 +342,7 @@
 				CE3F59F81FC55DD300A15FCC /* SignInViewController.swift in Sources */,
 				CE3F59F21FC557CA00A15FCC /* ProfileTabViewController.swift in Sources */,
 				CE7A21B11FC5968D008A2407 /* PostWriteViewController.swift in Sources */,
+				CE1DEFF01FC8420000BCF306 /* PostEmptyTableViewCell.swift in Sources */,
 				CE3F59F61FC55DCB00A15FCC /* LoginViewController.swift in Sources */,
 				CE3F59F41FC55DB700A15FCC /* SplashViewController.swift in Sources */,
 			);

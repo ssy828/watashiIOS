@@ -11,6 +11,8 @@ target 'TestInstaGram' do
   pod 'FirebaseUI/Storage'
   pod 'SDWebImage', '~> 4.0'
   pod 'SnapKit', '~> 4.0.0'
+  pod 'SwiftKeychainWrapper'
+  pod 'PKHUD', '~> 5.0'
   # Pods for TestInstaGram
 
 end

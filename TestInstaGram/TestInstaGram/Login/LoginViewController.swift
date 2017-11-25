@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class LoginViewController: UIViewController {
     
@@ -137,15 +138,14 @@ class LoginViewController: UIViewController {
     // MARK: 로그인 버튼
     @objc func logIn(_ sender: UIButton)
     {
-        guard let account = emailTF.text, !account.isEmpty else { return }
+        guard let email = emailTF.text, !email.isEmpty else { return }
         guard let pwd = passwordTF.text, !pwd.isEmpty else { return }
-        Auth.auth().signIn(withEmail: account, password: pwd) { (user, error) in
-            if error == nil, let user = user {
-                /*user.getIDToken(completion: { token, error in
-                 if let token = token {
-                 UserDefaults.standard.setValue(token, forKey: "FirebaseUserToken")
-                 }
-                 })*/
+        Auth.auth().signIn(withEmail: email, password: pwd) { (user, error) in
+            if error == nil, user != nil {
+                let account = Account(email: email, password: pwd)
+                if let data = try? JSONEncoder().encode(account) {
+                    KeychainWrapper.standard.set(data, forKey: "account")
+                }
                 self.performSegue(withIdentifier: "segueLoginToMain", sender: nil)
             } else {
                 UIAlertController.present(target: self, msg: "이메일 또는 비밀번호가 잘못되었습니다.")
