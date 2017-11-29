@@ -186,7 +186,7 @@ class SignInViewController: UIViewController {
                     profileChangeRequest.displayName = nickName
                     profileChangeRequest.commitChanges(completion: nil)
                     
-                    let userDic: [String: Any] = ["user": ["email": user.email, "nickname":nickName]]
+                    let userDic: [String: Any] = ["user": ["email": user.email, "nickname": nickName]]
                     self.reference.child(user.uid).setValue(userDic)
                     
                     UIAlertController.present(target: self, msg: "가입되었습니다.") { _ in

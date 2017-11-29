@@ -89,11 +89,6 @@ extension PostsTabViewController: UITableViewDelegate{
     
 }
 
-struct User{
-    var idx: Int
-    var nickName: String
-}
-
 struct Post{
     var key: String?
     var userNickname: String = ""

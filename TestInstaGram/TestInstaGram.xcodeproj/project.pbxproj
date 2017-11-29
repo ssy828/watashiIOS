@@ -102,7 +102,6 @@
 		CE3BC1B01FC284D000BB6DE1 /* TestInstaGram */ = {
 			isa = PBXGroup;
 			children = (
-				CE7A21AA1FC58447008A2407 /* PostTableViewCell.xib */,
 				CEDF65C41FC5CF0A004AA710 /* Extension */,
 				CEDF65C31FC5CEFF004AA710 /* PostWrite */,
 				CEDF65C01FC5CEA3004AA710 /* Profile */,
@@ -157,6 +156,7 @@
 		CEDF65C11FC5CEBB004AA710 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE7A21AA1FC58447008A2407 /* PostTableViewCell.xib */,
 				CE7A21AC1FC58722008A2407 /* PostTableViewCell.swift */,
 				CE1DEFEE1FC8420000BCF306 /* PostEmptyTableViewCell.swift */,
 				CE1DEFEF1FC8420000BCF306 /* PostEmptyTableViewCell.xib */,
