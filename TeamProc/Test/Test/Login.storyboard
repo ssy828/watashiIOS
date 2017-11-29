@@ -12,6 +12,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -73,7 +78,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="1" green="0.99607843137254903" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="Ldm-cf-X4t" firstAttribute="centerY" secondItem="eY6-aN-Gvw" secondAttribute="centerY" multiplier="1.1" id="1bq-3K-zS3"/>
                                                     <constraint firstItem="RbG-Ft-dQt" firstAttribute="height" secondItem="eY6-aN-Gvw" secondAttribute="height" multiplier="0.1" id="48m-a2-V0h"/>
@@ -105,7 +110,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="39"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                 </subviews>
@@ -126,7 +131,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.96078431369999995" green="0.94117647059999998" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="eY6-aN-Gvw" firstAttribute="centerY" secondItem="Rn1-w5-KIS" secondAttribute="centerY" id="80N-Z6-Krd"/>
                                             <constraint firstItem="Z4H-34-PSD" firstAttribute="height" secondItem="Axq-3f-nJR" secondAttribute="height" id="AQC-qB-Ix5"/>
@@ -326,6 +331,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rt8-9z-utR"/>
+        <segue reference="W9a-hw-E5q"/>
     </inferredMetricsTieBreakers>
 </document>
