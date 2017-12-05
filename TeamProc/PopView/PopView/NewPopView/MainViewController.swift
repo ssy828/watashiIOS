@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         self.baseView.addSubview(popView)
         popView.dateLB.text = "2017-12-05"
+        
     }
 
 
