@@ -13,8 +13,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.baseView.addSubview(popView)
-        popView.dateLB.text = "2017-12-05"
-        
+//        popView.dateLB.text = "2017-12-05"
     }
 
 

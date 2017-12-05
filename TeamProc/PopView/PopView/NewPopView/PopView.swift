@@ -9,19 +9,18 @@ class PopView: UIView{
     
     // MARK: IBOutlet
     @IBOutlet weak var baseView: UIView!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var dateLB: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    // MARK: IBAction
-    @IBAction func close(_ sender: UIButton){
-        self.removeFromSuperview()
-    }
+    var isLoading: Bool = false
+    
+ 
     // MARK: awakeFromNib()
     override func awakeFromNib() {
         super.awakeFromNib()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib.init(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "cell")
+        tableView.register(UINib.init(nibName: "EmptyCell", bundle: nil), forCellReuseIdentifier: "EmptyCell")
+        tableView.register(UINib.init(nibName: "HeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderSection")
     }
     
     // 코드
@@ -42,16 +41,19 @@ class PopView: UIView{
         self.addSubview(baseView)
         baseView.frame = self.bounds
         baseView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-        self.baseView.addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+       
     }
 }
 
 // MARK: UITableViewDataSource
 extension PopView: UITableViewDataSource {
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return (isLoading) ?  0 : (count > 0)? count : 1
         return 10
     }
     
@@ -65,5 +67,10 @@ extension PopView: UITableViewDataSource {
 // MARK:
 extension PopView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderSection") as! HeaderSection
+        headerView.dateLB.text = "2017년 12월 6일"
+        return headerView
+    }
 }
 

@@ -8,11 +8,11 @@ extension UIViewController {
     
     // MARK: 뷰띄우기
     func popUpView() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissView))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
-    @objc func dismissKeyboard() {
+    @objc func dismissView() {
         view.endEditing(true)
     }
 }

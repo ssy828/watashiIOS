@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		96C77FC17FAC6AE7E0CB1FDE /* Pods_PopView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ED9CD9C618CA70B8B919E2 /* Pods_PopView.framework */; };
+		CE51B8DE1FD71E3A00833546 /* HeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51B8DD1FD71E3A00833546 /* HeaderSection.swift */; };
+		CE51B8E01FD71E4F00833546 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE51B8DF1FD71E4F00833546 /* HeaderView.xib */; };
 		CEDCD4C31FD6F7830067E9B1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C11FD6F7830067E9B1 /* CustomCell.swift */; };
 		CEDCD4C41FD6F7830067E9B1 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDCD4C21FD6F7830067E9B1 /* CustomCell.xib */; };
+		CEDCD4C71FD708950067E9B1 /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C51FD708950067E9B1 /* EmptyCell.swift */; };
+		CEDCD4C81FD708950067E9B1 /* EmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDCD4C61FD708950067E9B1 /* EmptyCell.xib */; };
 		CEDD8F021FD685940099C2ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F011FD685940099C2ED /* AppDelegate.swift */; };
 		CEDD8F041FD685940099C2ED /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F031FD685940099C2ED /* PopViewController.swift */; };
 		CEDD8F071FD685940099C2ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F051FD685940099C2ED /* Main.storyboard */; };
@@ -27,8 +31,12 @@
 		15ED9CD9C618CA70B8B919E2 /* Pods_PopView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCC706595ECBEC98E146E3E /* Pods-PopView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopView.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopView/Pods-PopView.release.xcconfig"; sourceTree = "<group>"; };
 		3CAFFFC5D853E268FAFC24A6 /* Pods-PopView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopView/Pods-PopView.debug.xcconfig"; sourceTree = "<group>"; };
+		CE51B8DD1FD71E3A00833546 /* HeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSection.swift; sourceTree = "<group>"; };
+		CE51B8DF1FD71E4F00833546 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		CEDCD4C11FD6F7830067E9B1 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		CEDCD4C21FD6F7830067E9B1 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		CEDCD4C51FD708950067E9B1 /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
+		CEDCD4C61FD708950067E9B1 /* EmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
 		CEDD8EFE1FD685940099C2ED /* PopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDD8F011FD685940099C2ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDD8F031FD685940099C2ED /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +121,11 @@
 				CEDD8F1F1FD6B51C0099C2ED /* Extension.swift */,
 				CEDD8F211FD6B6990099C2ED /* PopView.swift */,
 				CEDCD4C11FD6F7830067E9B1 /* CustomCell.swift */,
+				CEDCD4C51FD708950067E9B1 /* EmptyCell.swift */,
+				CEDCD4C61FD708950067E9B1 /* EmptyCell.xib */,
 				CEDCD4C21FD6F7830067E9B1 /* CustomCell.xib */,
+				CE51B8DF1FD71E4F00833546 /* HeaderView.xib */,
+				CE51B8DD1FD71E3A00833546 /* HeaderSection.swift */,
 			);
 			path = NewPopView;
 			sourceTree = "<group>";
@@ -192,6 +204,8 @@
 			files = (
 				CEDCD4C41FD6F7830067E9B1 /* CustomCell.xib in Resources */,
 				CEDD8F0C1FD685940099C2ED /* LaunchScreen.storyboard in Resources */,
+				CEDCD4C81FD708950067E9B1 /* EmptyCell.xib in Resources */,
+				CE51B8E01FD71E4F00833546 /* HeaderView.xib in Resources */,
 				CEDD8F1A1FD6B03C0099C2ED /* PopView.xib in Resources */,
 				CEDD8F141FD687A50099C2ED /* WritingListPopView.xib in Resources */,
 				CEDD8F091FD685940099C2ED /* Assets.xcassets in Resources */,
@@ -261,9 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDD8F201FD6B51C0099C2ED /* Extension.swift in Sources */,
+				CEDCD4C71FD708950067E9B1 /* EmptyCell.swift in Sources */,
 				CEDD8F041FD685940099C2ED /* PopViewController.swift in Sources */,
 				CEDD8F021FD685940099C2ED /* AppDelegate.swift in Sources */,
 				CEDD8F181FD697180099C2ED /* PostTableViewCell.swift in Sources */,
+				CE51B8DE1FD71E3A00833546 /* HeaderSection.swift in Sources */,
 				CEDD8F221FD6B6990099C2ED /* PopView.swift in Sources */,
 				CEDCD4C31FD6F7830067E9B1 /* CustomCell.swift in Sources */,
 				CEDD8F1E1FD6B4E90099C2ED /* MainViewController.swift in Sources */,
