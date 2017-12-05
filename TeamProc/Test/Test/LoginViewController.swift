@@ -64,6 +64,7 @@ class LoginViewController: UIViewController {
         let keychainStr = KeychainWrapper.standard.data(forKey: userAccount)
         print("KEEEEEEY",keychainStr)
         faceBookBtn.delegate = self
+        FBSDKLoginManager().logOut()
         // MARK: 제스처
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backGroundTapKeyboardHide(_:))))
         
@@ -109,17 +110,24 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult?, error: Error!) {
-        if result?.token == nil {
+//        if result?.token == nil {
+//            return
+//        }
+//        print(FBSDKAccessToken.current().tokenString)
+        if error != nil {
+            print("error")
             return
         }
+        
         let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        
         Auth.auth().signIn(with: credential) { (user, error) in
             if error == nil, user != nil {
                 if let user = user {
                     let fbAccount = FBAccount(email: user.email, id: user.uid)
                     do{
                         let data = try JSONEncoder().encode(fbAccount)
-                        KeychainWrapper.standard.set(data, forKey: userAccount)
+//                        KeychainWrapper.standard.set(data, forKey: userAccount)
                         self.performSegue(withIdentifier: self.segueLoginToMain, sender: nil)
                     }catch (let error){
                         print("\(error.localizedDescription)")

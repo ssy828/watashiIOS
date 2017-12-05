@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96C77FC17FAC6AE7E0CB1FDE /* Pods_PopView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ED9CD9C618CA70B8B919E2 /* Pods_PopView.framework */; };
+		CEDD8F021FD685940099C2ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F011FD685940099C2ED /* AppDelegate.swift */; };
+		CEDD8F041FD685940099C2ED /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F031FD685940099C2ED /* PopViewController.swift */; };
+		CEDD8F071FD685940099C2ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F051FD685940099C2ED /* Main.storyboard */; };
+		CEDD8F091FD685940099C2ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F081FD685940099C2ED /* Assets.xcassets */; };
+		CEDD8F0C1FD685940099C2ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F0A1FD685940099C2ED /* LaunchScreen.storyboard */; };
+		CEDD8F141FD687A50099C2ED /* WritingListPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F131FD687A50099C2ED /* WritingListPopView.xib */; };
+		CEDD8F181FD697180099C2ED /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F171FD697180099C2ED /* PostTableViewCell.swift */; };
+		CEDD8F1A1FD6B03C0099C2ED /* PopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F191FD6B03C0099C2ED /* PopView.xib */; };
+		CEDD8F1E1FD6B4E90099C2ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F1D1FD6B4E90099C2ED /* MainViewController.swift */; };
+		CEDD8F201FD6B51C0099C2ED /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F1F1FD6B51C0099C2ED /* Extension.swift */; };
+		CEDD8F221FD6B6990099C2ED /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F211FD6B6990099C2ED /* PopView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15ED9CD9C618CA70B8B919E2 /* Pods_PopView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BCC706595ECBEC98E146E3E /* Pods-PopView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopView.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopView/Pods-PopView.release.xcconfig"; sourceTree = "<group>"; };
+		3CAFFFC5D853E268FAFC24A6 /* Pods-PopView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopView/Pods-PopView.debug.xcconfig"; sourceTree = "<group>"; };
+		CEDD8EFE1FD685940099C2ED /* PopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDD8F011FD685940099C2ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEDD8F031FD685940099C2ED /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
+		CEDD8F061FD685940099C2ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEDD8F081FD685940099C2ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDD8F0B1FD685940099C2ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEDD8F0D1FD685940099C2ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDD8F131FD687A50099C2ED /* WritingListPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WritingListPopView.xib; sourceTree = "<group>"; };
+		CEDD8F171FD697180099C2ED /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		CEDD8F191FD6B03C0099C2ED /* PopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopView.xib; sourceTree = "<group>"; };
+		CEDD8F1D1FD6B4E90099C2ED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CEDD8F1F1FD6B51C0099C2ED /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CEDD8F211FD6B6990099C2ED /* PopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDD8EFB1FD685940099C2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96C77FC17FAC6AE7E0CB1FDE /* Pods_PopView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9186FFC80A2E1B06D4084785 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15ED9CD9C618CA70B8B919E2 /* Pods_PopView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE5606063152B22EE0D92AA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CAFFFC5D853E268FAFC24A6 /* Pods-PopView.debug.xcconfig */,
+				1BCC706595ECBEC98E146E3E /* Pods-PopView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEDD8EF51FD685940099C2ED = {
+			isa = PBXGroup;
+			children = (
+				CEDD8F001FD685940099C2ED /* PopView */,
+				CEDD8EFF1FD685940099C2ED /* Products */,
+				AE5606063152B22EE0D92AA9 /* Pods */,
+				9186FFC80A2E1B06D4084785 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDD8EFF1FD685940099C2ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDD8EFE1FD685940099C2ED /* PopView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDD8F001FD685940099C2ED /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				CEDD8F1C1FD6B3010099C2ED /* popView */,
+				CEDD8F1B1FD6B2EF0099C2ED /* NewPopView */,
+				CEDD8F011FD685940099C2ED /* AppDelegate.swift */,
+				CEDD8F051FD685940099C2ED /* Main.storyboard */,
+				CEDD8F081FD685940099C2ED /* Assets.xcassets */,
+				CEDD8F0A1FD685940099C2ED /* LaunchScreen.storyboard */,
+				CEDD8F0D1FD685940099C2ED /* Info.plist */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
+		CEDD8F1B1FD6B2EF0099C2ED /* NewPopView */ = {
+			isa = PBXGroup;
+			children = (
+				CEDD8F191FD6B03C0099C2ED /* PopView.xib */,
+				CEDD8F1D1FD6B4E90099C2ED /* MainViewController.swift */,
+				CEDD8F1F1FD6B51C0099C2ED /* Extension.swift */,
+				CEDD8F211FD6B6990099C2ED /* PopView.swift */,
+			);
+			path = NewPopView;
+			sourceTree = "<group>";
+		};
+		CEDD8F1C1FD6B3010099C2ED /* popView */ = {
+			isa = PBXGroup;
+			children = (
+				CEDD8F031FD685940099C2ED /* PopViewController.swift */,
+				CEDD8F171FD697180099C2ED /* PostTableViewCell.swift */,
+				CEDD8F131FD687A50099C2ED /* WritingListPopView.xib */,
+			);
+			path = popView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDD8EFD1FD685940099C2ED /* PopView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDD8F101FD685940099C2ED /* Build configuration list for PBXNativeTarget "PopView" */;
+			buildPhases = (
+				ED41F1DDE41FE06F6465AA54 /* [CP] Check Pods Manifest.lock */,
+				CEDD8EFA1FD685940099C2ED /* Sources */,
+				CEDD8EFB1FD685940099C2ED /* Frameworks */,
+				CEDD8EFC1FD685940099C2ED /* Resources */,
+				0BA555E7014330209DD70F1F /* [CP] Embed Pods Frameworks */,
+				9A50963289F2B0C27A6C1F7D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopView;
+			productName = PopView;
+			productReference = CEDD8EFE1FD685940099C2ED /* PopView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDD8EF61FD685940099C2ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "SONGYEE SHIN";
+				TargetAttributes = {
+					CEDD8EFD1FD685940099C2ED = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CEDD8EF91FD685940099C2ED /* Build configuration list for PBXProject "PopView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEDD8EF51FD685940099C2ED;
+			productRefGroup = CEDD8EFF1FD685940099C2ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDD8EFD1FD685940099C2ED /* PopView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDD8EFC1FD685940099C2ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDD8F0C1FD685940099C2ED /* LaunchScreen.storyboard in Resources */,
+				CEDD8F1A1FD6B03C0099C2ED /* PopView.xib in Resources */,
+				CEDD8F141FD687A50099C2ED /* WritingListPopView.xib in Resources */,
+				CEDD8F091FD685940099C2ED /* Assets.xcassets in Resources */,
+				CEDD8F071FD685940099C2ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BA555E7014330209DD70F1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PopView/Pods-PopView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopView/Pods-PopView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A50963289F2B0C27A6C1F7D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopView/Pods-PopView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED41F1DDE41FE06F6465AA54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PopView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDD8EFA1FD685940099C2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDD8F201FD6B51C0099C2ED /* Extension.swift in Sources */,
+				CEDD8F041FD685940099C2ED /* PopViewController.swift in Sources */,
+				CEDD8F021FD685940099C2ED /* AppDelegate.swift in Sources */,
+				CEDD8F181FD697180099C2ED /* PostTableViewCell.swift in Sources */,
+				CEDD8F221FD6B6990099C2ED /* PopView.swift in Sources */,
+				CEDD8F1E1FD6B4E90099C2ED /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEDD8F051FD685940099C2ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDD8F061FD685940099C2ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEDD8F0A1FD685940099C2ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDD8F0B1FD685940099C2ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEDD8F0E1FD685940099C2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEDD8F0F1FD685940099C2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDD8F111FD685940099C2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CAFFFC5D853E268FAFC24A6 /* Pods-PopView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PopView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Hello.PopView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEDD8F121FD685940099C2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BCC706595ECBEC98E146E3E /* Pods-PopView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PopView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Hello.PopView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDD8EF91FD685940099C2ED /* Build configuration list for PBXProject "PopView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDD8F0E1FD685940099C2ED /* Debug */,
+				CEDD8F0F1FD685940099C2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDD8F101FD685940099C2ED /* Build configuration list for PBXNativeTarget "PopView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDD8F111FD685940099C2ED /* Debug */,
+				CEDD8F121FD685940099C2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEDD8EF61FD685940099C2ED /* Project object */;
+}
