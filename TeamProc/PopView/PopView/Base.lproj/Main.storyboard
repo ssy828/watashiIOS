@@ -19,22 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9R3-ca-ivS" userLabel="Base View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9R3-ca-ivS" userLabel="Base View" customClass="PopView" customModule="PopView" customModuleProvider="target">
                                 <rect key="frame" x="12" y="71" width="350" height="525"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLe-rh-HKE" customClass="PopView" customModule="PopView" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="112" width="300" height="300"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="Ejz-tB-WSQ"/>
-                                            <constraint firstAttribute="height" constant="300" id="fx9-AS-eAi"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="Doe-ku-2Ix"/>
-                                    <constraint firstItem="DLe-rh-HKE" firstAttribute="centerY" secondItem="9R3-ca-ivS" secondAttribute="centerY" id="F4M-5V-I80"/>
-                                    <constraint firstItem="DLe-rh-HKE" firstAttribute="centerX" secondItem="9R3-ca-ivS" secondAttribute="centerX" id="LYf-fL-b05"/>
                                     <constraint firstAttribute="width" secondItem="9R3-ca-ivS" secondAttribute="height" multiplier="1:1.5" id="gVZ-Df-rM5"/>
                                 </constraints>
                             </view>
@@ -47,8 +36,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="baseView" destination="9R3-ca-ivS" id="f9O-HG-wqE"/>
-                        <outlet property="popView" destination="DLe-rh-HKE" id="43R-86-Zcv"/>
+                        <outlet property="baseView" destination="9R3-ca-ivS" id="y5M-qz-xfg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
