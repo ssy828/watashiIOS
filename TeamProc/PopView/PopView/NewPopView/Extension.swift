@@ -17,8 +17,7 @@ extension UIView {
     
     func dismissViewInTapGesture(target: Any, action: Selector) {
         let tap = UITapGestureRecognizer(target: target, action: action)
-        tap.
+        tap.cancelsTouchesInView = false
         addGestureRecognizer(tap)
-        
     }
 }

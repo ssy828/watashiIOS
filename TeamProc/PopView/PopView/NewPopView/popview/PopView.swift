@@ -6,7 +6,7 @@ import UIKit
 import SnapKit
 
 class PopView: UIView{
-    
+    var testList: [String] = ["cat","puppy","red","yellow","blue~~~"]
     // MARK: IBOutlet
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -55,18 +55,29 @@ class PopView: UIView{
 }
 
 
-
 // MARK: UITableViewDataSource
 extension PopView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return (isLoading) ?  0 : (count > 0)? count : 1
-        return 10
+        let count = testList.count
+        return (isLoading) ?  0 : (count > 0) ? count : 1
+//        return testList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
-        return cell
+        switch testList.count {
+        case 0:
+            return tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath)
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            let index = indexPath.row
+            if let cell = cell as? CustomCell {
+               cell.contentLB.text = testList[index]
+            }
+            return cell
+        }
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
+//        return cell
     }
     
 }
