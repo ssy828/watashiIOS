@@ -41,7 +41,6 @@ class PopView: UIView{
         self.addSubview(baseView)
         baseView.frame = self.bounds
         baseView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-       
     }
 }
 
@@ -64,7 +63,7 @@ extension PopView: UITableViewDataSource {
     
 }
 
-// MARK:
+// MARK: UITableViewDelegate
 extension PopView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

@@ -13,7 +13,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopView" customModule="PopView" customModuleProvider="target">
             <connections>
                 <outlet property="baseView" destination="iN0-l3-epB" id="Gc9-10-Nce"/>
-                <outlet property="contentView" destination="rDc-UC-DRy" id="Nwn-cp-Tqm"/>
                 <outlet property="tableView" destination="wWh-V8-9Ia" id="AFD-Zg-byB"/>
             </connections>
         </placeholder>
@@ -22,34 +21,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-UC-DRy">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="45" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wWh-V8-9Ia">
-                            <rect key="frame" x="30" y="167" width="315" height="334"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="315" id="0VN-mY-psx"/>
-                                <constraint firstAttribute="height" constant="334" id="PMG-ou-EZA"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="dataSource" destination="-1" id="70x-ID-IVu"/>
-                                <outlet property="delegate" destination="-1" id="NXf-Af-lzA"/>
-                            </connections>
-                        </tableView>
-                    </subviews>
-                    <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="45" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wWh-V8-9Ia">
+                    <rect key="frame" x="30" y="166" width="315" height="334"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="wWh-V8-9Ia" firstAttribute="centerY" secondItem="rDc-UC-DRy" secondAttribute="centerY" id="DIK-e8-RLV"/>
-                        <constraint firstItem="wWh-V8-9Ia" firstAttribute="centerX" secondItem="rDc-UC-DRy" secondAttribute="centerX" id="Vde-zD-iPO"/>
+                        <constraint firstAttribute="width" constant="315" id="0VN-mY-psx"/>
+                        <constraint firstAttribute="height" constant="334" id="PMG-ou-EZA"/>
                     </constraints>
-                </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="70x-ID-IVu"/>
+                        <outlet property="delegate" destination="-1" id="NXf-Af-lzA"/>
+                    </connections>
+                </tableView>
             </subviews>
             <constraints>
-                <constraint firstItem="rDc-UC-DRy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aaf-XC-SRb"/>
-                <constraint firstItem="rDc-UC-DRy" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="c14-ju-D5v"/>
-                <constraint firstItem="rDc-UC-DRy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gqb-Wi-J5h"/>
-                <constraint firstAttribute="trailing" secondItem="rDc-UC-DRy" secondAttribute="trailing" id="lWk-pO-BxU"/>
+                <constraint firstItem="wWh-V8-9Ia" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cxq-ja-RQV"/>
+                <constraint firstItem="wWh-V8-9Ia" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yeJ-dz-ZvQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="63.5" y="126.5"/>
