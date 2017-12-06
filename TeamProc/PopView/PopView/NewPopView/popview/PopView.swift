@@ -13,11 +13,9 @@ class PopView: UIView{
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var dateLB: UILabel!
     @IBAction func close(_ sender: UIButton) {
-        contentView.removeFromSuperview()
-        //           self.removeFromSuperview()
+        contentView.isHidden = true
     }
     var isLoading: Bool = false
-    
     
     // MARK: awakeFromNib()
     override func awakeFromNib() {
@@ -26,7 +24,7 @@ class PopView: UIView{
         tableView.delegate = self
         tableView.register(UINib.init(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView.register(UINib.init(nibName: "EmptyCell", bundle: nil), forCellReuseIdentifier: "EmptyCell")
-       
+        contentView.isHidden = true
     }
     
     // 코드
@@ -61,10 +59,6 @@ class PopView: UIView{
 // MARK: UITableViewDataSource
 extension PopView: UITableViewDataSource {
     
-    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        return UITableViewAutomaticDimension
-    //    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //        return (isLoading) ?  0 : (count > 0)? count : 1
         return 10
@@ -80,10 +74,5 @@ extension PopView: UITableViewDataSource {
 // MARK: UITableViewDelegate
 extension PopView: UITableViewDelegate {
     
-    //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    //        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderSection") as! HeaderSection
-    //        headerView.dateLB.text = "2017년 12월 6일"
-    //        return headerView
-    //    }
 }
 

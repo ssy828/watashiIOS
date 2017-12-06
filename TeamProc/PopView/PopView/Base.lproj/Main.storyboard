@@ -21,7 +21,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9R3-ca-ivS" userLabel="Base View" customClass="PopView" customModule="PopView" customModuleProvider="target">
                                 <rect key="frame" x="12" y="71" width="350" height="525"/>
-                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="Doe-ku-2Ix"/>
                                     <constraint firstAttribute="width" secondItem="9R3-ca-ivS" secondAttribute="height" multiplier="1:1.5" id="gVZ-Df-rM5"/>

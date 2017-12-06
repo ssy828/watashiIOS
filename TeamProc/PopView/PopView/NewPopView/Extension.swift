@@ -4,15 +4,21 @@
 
 import UIKit
 
-extension UIViewController {
+extension UIView {
     
-    // MARK: 뷰띄우기
-    func popUpView() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissView))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
+    // MARK: 탭제스쳐
+    func addTapGesture(tapNumber : Int, target: Any , action : Selector) {
+        
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        tap.numberOfTapsRequired = tapNumber
+        addGestureRecognizer(tap)
+        isUserInteractionEnabled = true
     }
-    @objc func dismissView() {
-        view.endEditing(true)
+    
+    func dismissViewInTapGesture(target: Any, action: Selector) {
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        tap.
+        addGestureRecognizer(tap)
+        
     }
 }

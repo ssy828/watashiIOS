@@ -2,7 +2,6 @@
 //  MainViewController.swift
 //  PopView
 
-
 import UIKit
 
 class MainViewController: UIViewController {
@@ -14,12 +13,15 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         self.view.addSubview(baseView)
         baseView.dateLB.text = "2017-12-05"
-//        self.view.addSubview(popView)
+        baseView.addTapGesture(tapNumber: 2, target: self, action: #selector(handlerTapGesture))
     }
 
+    @objc func handlerTapGesture(_ tap: UIGestureRecognizer) {
+        print("tap")
+        if let contentview = baseView.contentView {
+            contentview.isHidden = false
+        }
+    }
 
 }
 
-extension MainViewController {
-    
-}

@@ -23,8 +23,8 @@
 		CEDD8F181FD697180099C2ED /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F171FD697180099C2ED /* PostTableViewCell.swift */; };
 		CEDD8F1A1FD6B03C0099C2ED /* PopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F191FD6B03C0099C2ED /* PopView.xib */; };
 		CEDD8F1E1FD6B4E90099C2ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F1D1FD6B4E90099C2ED /* MainViewController.swift */; };
-		CEDD8F201FD6B51C0099C2ED /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F1F1FD6B51C0099C2ED /* Extension.swift */; };
 		CEDD8F221FD6B6990099C2ED /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F211FD6B6990099C2ED /* PopView.swift */; };
+		CEE7A9761FD84BFF00ACDFB0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7A9751FD84BFF00ACDFB0 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +48,8 @@
 		CEDD8F171FD697180099C2ED /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CEDD8F191FD6B03C0099C2ED /* PopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopView.xib; sourceTree = "<group>"; };
 		CEDD8F1D1FD6B4E90099C2ED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		CEDD8F1F1FD6B51C0099C2ED /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CEDD8F211FD6B6990099C2ED /* PopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopView.swift; sourceTree = "<group>"; };
+		CEE7A9751FD84BFF00ACDFB0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +116,10 @@
 		CEDD8F1B1FD6B2EF0099C2ED /* NewPopView */ = {
 			isa = PBXGroup;
 			children = (
+				CEE7A9751FD84BFF00ACDFB0 /* Extension.swift */,
 				CEE7A9741FD7D7B500ACDFB0 /* popview */,
 				CEE7A9731FD7D7A700ACDFB0 /* MainVC */,
 				CEE7A9721FD7D77900ACDFB0 /* TableViewCell */,
-				CEDD8F1F1FD6B51C0099C2ED /* Extension.swift */,
 			);
 			path = NewPopView;
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDD8F201FD6B51C0099C2ED /* Extension.swift in Sources */,
+				CEE7A9761FD84BFF00ACDFB0 /* Extension.swift in Sources */,
 				CEDCD4C71FD708950067E9B1 /* EmptyCell.swift in Sources */,
 				CEDD8F041FD685940099C2ED /* PopViewController.swift in Sources */,
 				CEDD8F021FD685940099C2ED /* AppDelegate.swift in Sources */,
