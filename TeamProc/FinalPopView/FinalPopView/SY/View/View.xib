@@ -25,6 +25,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4U-lw-fqB">
                                     <rect key="frame" x="210" y="0.0" width="80" height="70"/>
                                     <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="addPostButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="IZC-ug-xsk"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxn-hC-YN8">
                                     <rect key="frame" x="10" y="0.0" width="200" height="70"/>
@@ -48,7 +51,7 @@
                                 <constraint firstAttribute="bottom" secondItem="b4U-lw-fqB" secondAttribute="bottom" id="sDh-34-kKn"/>
                             </constraints>
                         </view>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kQj-df-sBl">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kQj-df-sBl">
                             <rect key="frame" x="0.0" y="80" width="300" height="320"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>

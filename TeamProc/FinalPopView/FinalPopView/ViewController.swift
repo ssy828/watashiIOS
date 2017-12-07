@@ -5,7 +5,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-//    @IBOutlet weak var popView: PopView!
+    // 사용자 정의 팝업
+    let popUpView: PopView = UINib(nibName: "View", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! PopView
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,8 +16,6 @@ class ViewController: UIViewController {
 
     // MARK: 팝업뷰 세팅
     func setUpPopUpView() {
-        // 사용자 정의 팝업
-        let popUpView: PopView = UINib(nibName: "View", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! PopView
         // 팝업뷰 생성
         let viewColor = UIColor.black
         // 부모뷰 투명
@@ -26,10 +25,30 @@ class ViewController: UIViewController {
         let baseViewColor = UIColor.white
         // 팝업 배경
         popUpView.baseView.backgroundColor = baseViewColor.withAlphaComponent(0.8)
-        // 팝업 뷰 테두리
-        popUpView.baseView.layer.cornerRadius = 20
+        popUpView.tableView.delegate = self
+        popUpView.tableView.dataSource = self
+        popUpView.tableView.register(UINib.init(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
+//        tableView.register(UINib.init(nibName: "EmptyCell", bundle: nil), forCellReuseIdentifier: "EmptyCell")
         self.view.addSubview(popUpView)
     }
 
 }
 
+//
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+        return cell
+    }
+
+
+}
+
+extension ViewController: UITableViewDelegate {
+    
+}

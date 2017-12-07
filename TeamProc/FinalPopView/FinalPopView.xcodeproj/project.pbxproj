@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3AD0351FD969BA00EC9436 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AD0331FD969BA00EC9436 /* PostCell.swift */; };
+		CE3AD0361FD969BA00EC9436 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD0341FD969BA00EC9436 /* PostCell.xib */; };
 		CEE871B11FD9240D005E6339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE871B01FD9240D005E6339 /* AppDelegate.swift */; };
 		CEE871B31FD9240D005E6339 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE871B21FD9240D005E6339 /* ViewController.swift */; };
 		CEE871B61FD9240D005E6339 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE871B41FD9240D005E6339 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE3AD0331FD969BA00EC9436 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		CE3AD0341FD969BA00EC9436 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		CEE871AD1FD9240D005E6339 /* FinalPopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalPopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE871B01FD9240D005E6339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE871B21FD9240D005E6339 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			children = (
 				CEE871C51FD925F2005E6339 /* View.xib */,
 				CEE871C71FD929CB005E6339 /* PopView.swift */,
+				CE3AD0331FD969BA00EC9436 /* PostCell.swift */,
+				CE3AD0341FD969BA00EC9436 /* PostCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 			files = (
 				CEE871C61FD925F2005E6339 /* View.xib in Resources */,
 				CEE871BB1FD9240D005E6339 /* LaunchScreen.storyboard in Resources */,
+				CE3AD0361FD969BA00EC9436 /* PostCell.xib in Resources */,
 				CEE871B81FD9240D005E6339 /* Assets.xcassets in Resources */,
 				CEE871B61FD9240D005E6339 /* Main.storyboard in Resources */,
 			);
@@ -162,6 +169,7 @@
 				CEE871B31FD9240D005E6339 /* ViewController.swift in Sources */,
 				CEE871C81FD929CB005E6339 /* PopView.swift in Sources */,
 				CEE871B11FD9240D005E6339 /* AppDelegate.swift in Sources */,
+				CE3AD0351FD969BA00EC9436 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
