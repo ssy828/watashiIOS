@@ -10,6 +10,7 @@
 		96C77FC17FAC6AE7E0CB1FDE /* Pods_PopView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ED9CD9C618CA70B8B919E2 /* Pods_PopView.framework */; };
 		CE51B8DE1FD71E3A00833546 /* HeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51B8DD1FD71E3A00833546 /* HeaderSection.swift */; };
 		CE51B8E01FD71E4F00833546 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE51B8DF1FD71E4F00833546 /* HeaderView.xib */; };
+		CEB7A9BF1FD8F4C9001CE469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB7A9BE1FD8F4C9001CE469 /* Assets.xcassets */; };
 		CEDCD4C31FD6F7830067E9B1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C11FD6F7830067E9B1 /* CustomCell.swift */; };
 		CEDCD4C41FD6F7830067E9B1 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDCD4C21FD6F7830067E9B1 /* CustomCell.xib */; };
 		CEDCD4C71FD708950067E9B1 /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C51FD708950067E9B1 /* EmptyCell.swift */; };
@@ -17,7 +18,6 @@
 		CEDD8F021FD685940099C2ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F011FD685940099C2ED /* AppDelegate.swift */; };
 		CEDD8F041FD685940099C2ED /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F031FD685940099C2ED /* PopViewController.swift */; };
 		CEDD8F071FD685940099C2ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F051FD685940099C2ED /* Main.storyboard */; };
-		CEDD8F091FD685940099C2ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F081FD685940099C2ED /* Assets.xcassets */; };
 		CEDD8F0C1FD685940099C2ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F0A1FD685940099C2ED /* LaunchScreen.storyboard */; };
 		CEDD8F141FD687A50099C2ED /* WritingListPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDD8F131FD687A50099C2ED /* WritingListPopView.xib */; };
 		CEDD8F181FD697180099C2ED /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD8F171FD697180099C2ED /* PostTableViewCell.swift */; };
@@ -33,6 +33,7 @@
 		3CAFFFC5D853E268FAFC24A6 /* Pods-PopView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopView/Pods-PopView.debug.xcconfig"; sourceTree = "<group>"; };
 		CE51B8DD1FD71E3A00833546 /* HeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSection.swift; sourceTree = "<group>"; };
 		CE51B8DF1FD71E4F00833546 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		CEB7A9BE1FD8F4C9001CE469 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDCD4C11FD6F7830067E9B1 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		CEDCD4C21FD6F7830067E9B1 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		CEDCD4C51FD708950067E9B1 /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		CEDD8F011FD685940099C2ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDD8F031FD685940099C2ED /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
 		CEDD8F061FD685940099C2ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CEDD8F081FD685940099C2ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDD8F0B1FD685940099C2ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDD8F0D1FD685940099C2ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDD8F131FD687A50099C2ED /* WritingListPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WritingListPopView.xib; sourceTree = "<group>"; };
@@ -106,9 +106,9 @@
 				CEDD8F1B1FD6B2EF0099C2ED /* NewPopView */,
 				CEDD8F011FD685940099C2ED /* AppDelegate.swift */,
 				CEDD8F051FD685940099C2ED /* Main.storyboard */,
-				CEDD8F081FD685940099C2ED /* Assets.xcassets */,
 				CEDD8F0A1FD685940099C2ED /* LaunchScreen.storyboard */,
 				CEDD8F0D1FD685940099C2ED /* Info.plist */,
+				CEB7A9BE1FD8F4C9001CE469 /* Assets.xcassets */,
 			);
 			path = PopView;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 				CE51B8E01FD71E4F00833546 /* HeaderView.xib in Resources */,
 				CEDD8F1A1FD6B03C0099C2ED /* PopView.xib in Resources */,
 				CEDD8F141FD687A50099C2ED /* WritingListPopView.xib in Resources */,
-				CEDD8F091FD685940099C2ED /* Assets.xcassets in Resources */,
+				CEB7A9BF1FD8F4C9001CE469 /* Assets.xcassets in Resources */,
 				CEDD8F071FD685940099C2ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PopView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hello.PopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -461,6 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PopView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hello.PopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";

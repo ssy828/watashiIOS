@@ -6,8 +6,17 @@ import UIKit
 
 class EmptyCell: UITableViewCell {
 
+    var completion: (() -> Void)?
+    
     @IBAction func writingPost(_ sender: UIButton){
-        print("AHHHHHH")
+//        let point = sender.superview?.convert(sender.center, to: self)
+//        if let indexPath = self.indexPathForRow(at: point!) {
+//            //pass indexPath as sender with performSegue
+//            self.performSegue(withIdentifier: "showDetail", sender: indexPath)
+//        }
+        
+        completion?()
+        
     }
     override func awakeFromNib() {
         super.awakeFromNib()

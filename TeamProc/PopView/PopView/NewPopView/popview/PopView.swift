@@ -5,8 +5,22 @@
 import UIKit
 import SnapKit
 
-class PopView: UIView{
-    var testList: [String] = ["cat","puppy","red","yellow","blue~~~"]
+protocol PopViewDelegate {
+    func emptyCellButton(_ popView: PopView, cell: EmptyCell)
+}
+
+protocol PopViewDataSource {
+    func numberOfSetions(_ popView: PopView) -> Int
+    func numberOfRowsInSections(_ popView: PopView, section: Int) -> Int
+}
+
+class PopView: UIView {
+    
+    var delegate: PopViewDelegate?
+    var dataSource: PopViewDataSource?
+    var testList: [String] = []
+    // "cat","puppy","red","yellow","blue"
+    
     // MARK: IBOutlet
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -60,14 +74,20 @@ extension PopView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = testList.count
-        return (isLoading) ?  0 : (count > 0) ? count : 1
+        return (count > 0) ? count : 1
 //        return testList.count
+//        return self.dataSource?.numberOfRowsInSections(self, section: section) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch testList.count {
         case 0:
-            return tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath) as! EmptyCell
+            cell.completion = { [weak self] in
+                guard let `self` = self else { return }
+                self.delegate?.emptyCellButton(self, cell: cell)
+            }
+            return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             let index = indexPath.row
@@ -85,5 +105,13 @@ extension PopView: UITableViewDataSource {
 // MARK: UITableViewDelegate
 extension PopView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch testList.count {
+        case 0:
+            return tableView.bounds.size.height
+        default:
+            return 100.0
+        }
+    }
 }
 
