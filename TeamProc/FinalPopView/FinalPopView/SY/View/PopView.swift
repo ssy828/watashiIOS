@@ -7,6 +7,9 @@ import UIKit
 
 class PopView: UIView {
     
+    // PopViewDelegate
+//    var popViewDelegate: PopViewDelegate?
+    
     // MARK: IBOutlet
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var contentView: UIView!
@@ -18,4 +21,10 @@ class PopView: UIView {
         
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
 }
+
+

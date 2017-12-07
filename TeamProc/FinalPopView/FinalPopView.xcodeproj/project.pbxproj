@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE3AD0351FD969BA00EC9436 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AD0331FD969BA00EC9436 /* PostCell.swift */; };
 		CE3AD0361FD969BA00EC9436 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD0341FD969BA00EC9436 /* PostCell.xib */; };
+		CEB8996C1FD9ABAB00BFFF3B /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8996A1FD9ABAB00BFFF3B /* EmptyCell.swift */; };
+		CEB8996D1FD9ABAB00BFFF3B /* EmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB8996B1FD9ABAB00BFFF3B /* EmptyCell.xib */; };
 		CEE871B11FD9240D005E6339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE871B01FD9240D005E6339 /* AppDelegate.swift */; };
 		CEE871B31FD9240D005E6339 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE871B21FD9240D005E6339 /* ViewController.swift */; };
 		CEE871B61FD9240D005E6339 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE871B41FD9240D005E6339 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		CE3AD0331FD969BA00EC9436 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		CE3AD0341FD969BA00EC9436 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		CEB8996A1FD9ABAB00BFFF3B /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
+		CEB8996B1FD9ABAB00BFFF3B /* EmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
 		CEE871AD1FD9240D005E6339 /* FinalPopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalPopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE871B01FD9240D005E6339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE871B21FD9240D005E6339 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				CEE871C71FD929CB005E6339 /* PopView.swift */,
 				CE3AD0331FD969BA00EC9436 /* PostCell.swift */,
 				CE3AD0341FD969BA00EC9436 /* PostCell.xib */,
+				CEB8996A1FD9ABAB00BFFF3B /* EmptyCell.swift */,
+				CEB8996B1FD9ABAB00BFFF3B /* EmptyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 				CE3AD0361FD969BA00EC9436 /* PostCell.xib in Resources */,
 				CEE871B81FD9240D005E6339 /* Assets.xcassets in Resources */,
 				CEE871B61FD9240D005E6339 /* Main.storyboard in Resources */,
+				CEB8996D1FD9ABAB00BFFF3B /* EmptyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +177,7 @@
 				CEE871C81FD929CB005E6339 /* PopView.swift in Sources */,
 				CEE871B11FD9240D005E6339 /* AppDelegate.swift in Sources */,
 				CE3AD0351FD969BA00EC9436 /* PostCell.swift in Sources */,
+				CEB8996C1FD9ABAB00BFFF3B /* EmptyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
