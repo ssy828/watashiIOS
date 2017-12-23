@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9el-Vc-WGk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today-->
+        <scene sceneID="w4O-27-BHU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Today" id="6rX-3s-Mbz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="투데이" image="TodayIcon" id="Rys-2a-AfY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwf-fa-0ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="13"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="Id6-4f-iI8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="ugX-mJ-XuF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="게임" image="GamesIcon" badgeValue="2" id="lCC-2v-cOW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0r-Pf-Q4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="612"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bq9-Wk-xt4">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9el-Vc-WGk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hS5-76-OwR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6rX-3s-Mbz" kind="relationship" relationship="viewControllers" id="HJt-Vx-epX"/>
+                        <segue destination="ugX-mJ-XuF" kind="relationship" relationship="viewControllers" id="UvG-GJ-9ml"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5eE-mT-aoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599" y="628"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GamesIcon" width="22" height="26"/>
+        <image name="TodayIcon" width="20" height="26"/>
+    </resources>
+</document>

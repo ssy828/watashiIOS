@@ -5,7 +5,7 @@ import UIKit
 
 class CustomCell: UITableViewCell {
     // 이곳에서만 사용해 이넘을 사용해
-    enum TextFieldStyle{
+    enum TextFieldStyle {
         case account // 계정
         case name // 이름
         case pwd // 비밀번호 필드

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayReusableView" id="U6b-Vx-4bR" customClass="TodayReusableView" customModule="LikeAppStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxo-hB-WF8">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00월 00일 0요일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1h-98-4PT">
+                            <rect key="frame" x="20" y="20" width="295" height="14.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투데이" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VQ-hi-xIc">
+                            <rect key="frame" x="20" y="54" width="78" height="36"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="c1h-98-4PT" firstAttribute="top" secondItem="Dxo-hB-WF8" secondAttribute="top" constant="20" id="3Ph-21-9kK"/>
+                        <constraint firstAttribute="bottom" secondItem="9VQ-hi-xIc" secondAttribute="bottom" constant="10" id="4PG-Pj-UmF"/>
+                        <constraint firstAttribute="trailing" secondItem="c1h-98-4PT" secondAttribute="trailing" constant="5" id="Zii-Ck-Se8"/>
+                        <constraint firstItem="9VQ-hi-xIc" firstAttribute="leading" secondItem="c1h-98-4PT" secondAttribute="leading" id="aeD-mN-Njb"/>
+                        <constraint firstItem="c1h-98-4PT" firstAttribute="leading" secondItem="Dxo-hB-WF8" secondAttribute="leading" constant="20" id="uvy-sO-1r9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Dxo-hB-WF8" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="0Zw-cA-9Zg"/>
+                <constraint firstItem="Dxo-hB-WF8" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="APa-GY-lRw"/>
+                <constraint firstAttribute="bottom" secondItem="Dxo-hB-WF8" secondAttribute="bottom" id="XWf-sn-v9D"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="Dxo-hB-WF8" secondAttribute="trailing" id="hdf-JX-TVn"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="dateLabel" destination="c1h-98-4PT" id="xhQ-fx-vXZ"/>
+                <outlet property="titleLabel" destination="9VQ-hi-xIc" id="ani-Wl-Bg7"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

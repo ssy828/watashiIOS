@@ -108,7 +108,7 @@ extension PopView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch testList.count {
         case 0:
-            return tableView.bounds.size.height
+            return UITableViewAutomaticDimension
         default:
             return 100.0
         }
