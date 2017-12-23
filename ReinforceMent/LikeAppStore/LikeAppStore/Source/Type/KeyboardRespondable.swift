@@ -10,25 +10,19 @@ import UIKit
 
 extension KeyboardRespondable where Self: UIViewController {
   
-  func addKeyboardNotification() {
-    NotificationCenter.default
-      .addObserver(self,
-                   selector: #selector(keyboardWillShow(_:)),
-                   name: .UIKeyboardWillShow,
-                   object: nil)
-    NotificationCenter.default
-      .addObserver(self,
-                   selector: #selector(keyboardWillHide(_:)),
-                   name: .UIKeyboardWillHide,
-                   object: nil)
-  }
+//  func addKeyboardNotification() {
+//    NotificationCenter.default
+//      .addObserver(self,
+//                   selector: #selector(keyboardWillShow(_:)),
+//                   name: .UIKeyboardWillShow,
+//                   object: nil)
+//    NotificationCenter.default
+//      .addObserver(self,
+//                   selector: #selector(keyboardWillHide(_:)),
+//                   name: .UIKeyboardWillHide,
+//                   object: nil)
+//  }
   
-  @objc func keyboardWillShow(_ notification: Notification) {
-    
-  }
-  @objc func keyboardWillHide(_ notificaiton: Notification) {
-    
-  }
 }
 
 
