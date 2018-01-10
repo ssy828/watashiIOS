@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TestTableView
+//  Setting_License
 //
-//  Created by SONGYEE SHIN on 2017. 12. 30..
-//  Copyright © 2017년 SONGYEE SHIN. All rights reserved.
+//  Created by SONGYEE SHIN on 2018. 1. 10..
+//  Copyright © 2018년 SONGYEE SHIN. All rights reserved.
 //
 
 import UIKit
