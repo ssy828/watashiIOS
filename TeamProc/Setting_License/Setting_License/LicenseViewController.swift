@@ -12,6 +12,7 @@ class LicenseViewController: UIViewController {
     [Kingfisher]
     The MIT License (MIT)
     Copyright (c) 2018 Wei Wang
+    (https://github.com/onevcat/Kingfisher)
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,13 +32,30 @@ class LicenseViewController: UIViewController {
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
     """
+    func testString() {
+        let attributeString = NSMutableAttributedString(string: text)
+        attributeString.addAttribute(.link, value: "https://github.com/onevcat/Kingfisher", range: NSString(string: text).range(of: "https://github.com/onevcat/Kingfisher"))
+        licenseTextView.attributedText = attributeString
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       licenseTextView.text = text
+        licenseTextView.text = text
+        testString()
+        licenseTextView.delegate = self
     }
-    
-    
     
 }
 
+extension LicenseViewController: UITextViewDelegate {
+    // MARK: custom용
+    // 예) 이용약관, 개인정보 보호정책 중에서 고를 경우
+//    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+////        UIApplication.shared.open(URL, options: [:], completionHandler: nil)
+////        return false
+//        let _ = URL.absoluteString
+//
+//        return true
+//    }
+}
