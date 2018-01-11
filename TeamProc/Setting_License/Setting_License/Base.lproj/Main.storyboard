@@ -48,6 +48,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KPT-d6-Zj6" id="OZn-ar-W0b"/>
+                                    <outlet property="delegate" destination="KPT-d6-Zj6" id="xBn-kX-9Xl"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +64,8 @@
                         <viewLayoutGuide key="safeArea" id="kpA-VM-l0z"/>
                     </view>
                     <navigationItem key="navigationItem" id="hBt-TR-rTC">
-                        <barButtonItem key="rightBarButtonItem" id="pJp-9e-s0R">
+                        <barButtonItem key="rightBarButtonItem" title="item" id="pJp-9e-s0R">
+                            <color key="tintColor" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="oYC-PU-Wd2" kind="show" id="ir0-v1-BPg"/>
                             </connections>
