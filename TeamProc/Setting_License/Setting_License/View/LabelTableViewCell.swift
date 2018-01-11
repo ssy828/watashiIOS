@@ -14,3 +14,4 @@ class LabelTableViewCell: UITableViewCell {
         // Initialization code
     }
 }
+

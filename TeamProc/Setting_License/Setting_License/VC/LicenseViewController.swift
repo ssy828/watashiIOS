@@ -8,8 +8,9 @@ class LicenseViewController: UIViewController {
     
     @IBOutlet weak var licenseTextView: UITextView!
     
-    let text = """
-    [Kingfisher]
+    private let licenseTitleList = ["가나다","라마바","사아자"]
+    
+    private let text = """
     The MIT License (MIT)
     Copyright (c) 2018 Wei Wang
     (https://github.com/onevcat/Kingfisher)
@@ -36,7 +37,7 @@ class LicenseViewController: UIViewController {
         let attributeString = NSMutableAttributedString(string: text)
         attributeString.addAttribute(.link, value: "https://github.com/onevcat/Kingfisher", range: NSString(string: text).range(of: "https://github.com/onevcat/Kingfisher"))
         licenseTextView.attributedText = attributeString
-
+        
     }
     
     override func viewDidLoad() {
@@ -45,17 +46,21 @@ class LicenseViewController: UIViewController {
         licenseTextView.delegate = self
         testString()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.navigationItem.title = "licenseTitleList"
+    }
+   
 }
 // MARK: - UITextViewDelegate
 extension LicenseViewController: UITextViewDelegate {
     // MARK: custom용
     // 예) 이용약관, 개인정보 보호정책 중에서 고를 경우
-//    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-////        UIApplication.shared.open(URL, options: [:], completionHandler: nil)
-////        return false
-//        let _ = URL.absoluteString
-//
-//        return true
-//    }
+    //    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+    ////        UIApplication.shared.open(URL, options: [:], completionHandler: nil)
+    ////        return false
+    //        let _ = URL.absoluteString
+    //
+    //        return true
+    //    }
 }

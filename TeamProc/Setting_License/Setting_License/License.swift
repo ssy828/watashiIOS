@@ -8,7 +8,6 @@ import Foundation
 struct License {
     let licenseTitle: String
     let licenseText = """
-    [Kingfisher]
     The MIT License (MIT)
     Copyright (c) 2018 Wei Wang
     (https://github.com/onevcat/Kingfisher)

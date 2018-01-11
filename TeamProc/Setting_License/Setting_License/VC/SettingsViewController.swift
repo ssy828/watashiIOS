@@ -8,7 +8,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var testList = ["A","B","C","???????","oHHHHHHHHHHHHHHHHHHH"]
+    private var testList = ["A","B","C","???????","oHHHHHHHHHHHHHHHHHHH"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

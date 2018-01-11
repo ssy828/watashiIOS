@@ -12,8 +12,6 @@ class SettingManager
     
     // SettingModel타입의 빈 배열
     var settings: [SettingModel] = []
-
-    // 이거 무슨차이?
     
     // 연산프로퍼티
 //    var settingData:[SettingModel]{
