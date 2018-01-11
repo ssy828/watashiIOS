@@ -10,13 +10,13 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var testList = ["A","B","C","???????","oHHHHHHHHHHHHHHHHHHH"]
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpTableFooterView()
         self.registerXib(tableView)
     }
-    
-    
+    // MARK: TableFooterViewUISetting
     private func setUpTableFooterView() {
         // tableFooterView를 정의.
         let footerView = UIView(frame: CGRect.zero)
@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
         // tableFooterView 설정
         tableView.tableFooterView = footerView
     }
-    
+    // MARK: registerXib
     public func registerXib(_ tableView: UITableView) {
         let xibName = UINib(nibName: "LabelTableViewCell", bundle: nil)
         tableView.register(xibName, forCellReuseIdentifier: "Cell")
@@ -33,7 +33,8 @@ class SettingsViewController: UIViewController {
 }
 // MARK: - UITableViewDelegate
 extension SettingsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 2:
             let licenseTVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LicenseTable")
@@ -46,11 +47,13 @@ extension SettingsViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension SettingsViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
         return testList.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! LabelTableViewCell
         cell.titleLB.text = testList[index]
