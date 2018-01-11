@@ -2,9 +2,7 @@
 //  AppDelegate.swift
 //  Setting_License
 //
-//  Created by SONGYEE SHIN on 2018. 1. 10..
-//  Copyright © 2018년 SONGYEE SHIN. All rights reserved.
-//
+
 
 import UIKit
 

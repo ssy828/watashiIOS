@@ -32,12 +32,10 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 1:
+        case 2:
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let licenseVC = storyBoard.instantiateViewController(withIdentifier: "LicenseVC")
-            self.present(licenseVC, animated: true, completion: nil)
-//        case 3:
-            
+            self.present(licenseVC, animated: false, completion: nil)
         default:
             break
         }

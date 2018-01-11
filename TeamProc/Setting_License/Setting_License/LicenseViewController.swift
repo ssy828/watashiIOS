@@ -46,6 +46,11 @@ class LicenseViewController: UIViewController {
         licenseTextView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.b
+    }
+    
 }
 
 extension LicenseViewController: UITextViewDelegate {
