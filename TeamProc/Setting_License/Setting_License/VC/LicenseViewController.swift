@@ -42,17 +42,12 @@ class LicenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         licenseTextView.text = text
-        testString()
         licenseTextView.delegate = self
+        testString()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-        super.viewWillAppear(animated)
-    }
-    
-}
 
+}
+// MARK: - UITextViewDelegate
 extension LicenseViewController: UITextViewDelegate {
     // MARK: custom용
     // 예) 이용약관, 개인정보 보호정책 중에서 고를 경우
