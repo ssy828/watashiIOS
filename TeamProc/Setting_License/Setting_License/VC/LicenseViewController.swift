@@ -8,19 +8,21 @@ class LicenseViewController: UIViewController {
     
     @IBOutlet weak var licenseTextView: UITextView!
     let licneseInstance = License()
+    var test: String?
     
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let _ = licneseInstance.makeSentenceOfLicense("https://github.com/onevcat/Kingfisher", licenseTextView)
-    }
-   
-}
-
-extension LicenseViewController: LicenseListViewControllerDelegate {
-    func sendAddress(of githubAddress: String) {
-       let _ = licneseInstance.makeSentenceOfLicense(githubAddress, licenseTextView)
+        //        let _ = licneseInstance.makeSentenceOfLicense("https://github.com/onevcat/Kingfisher", licenseTextView)
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.licenseTextView.text = test
+    }
+    
+
 }
+
 

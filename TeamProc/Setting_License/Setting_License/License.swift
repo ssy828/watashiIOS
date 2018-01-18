@@ -20,12 +20,12 @@ class License {
     IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     """
     
-    public func makeSentenceOfLicense(_ ofGitubAddress: String?,
+    public func configureLicenseSentence(_ ofGitubAddress: String?,
                                       _ textView: UITextView) -> String {
         guard let gitubAddress = ofGitubAddress else { return ""}
         sentence =  introductionOfLicense + "\n" +
-            "(\(gitubAddress))" + "\n" +
-            "\n" + conclusionOfLicense
+                    "(\(gitubAddress))" + "\n" +
+                    "\n" + conclusionOfLicense
         attributedOfLink(mutableString: sentence, ofValue: gitubAddress, range: gitubAddress, textView: textView)
         return sentence
     }
@@ -37,7 +37,6 @@ class License {
         let attributedString = NSMutableAttributedString(string: string)
         attributedString.addAttribute(.link, value: ofValue, range: NSString(string: string).range(of: ofSearchString))
         ofLicense.attributedText = attributedString
-        
     }
     
 }
