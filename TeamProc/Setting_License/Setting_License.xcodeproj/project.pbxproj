@@ -13,6 +13,7 @@
 		CE661537200628A0006B4AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE661536200628A0006B4AB9 /* Assets.xcassets */; };
 		CE66153A200628A1006B4AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE661538200628A1006B4AB9 /* LaunchScreen.storyboard */; };
 		CE66154620062DD8006B4AB9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66154520062DD7006B4AB9 /* SettingsViewController.swift */; };
+		CE7A92B62011CD54006AF7FA /* LicenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A92B52011CD54006AF7FA /* LicenseItem.swift */; };
 		CEBA4A822007A23A00ECF985 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA4A812007A23A00ECF985 /* License.swift */; };
 		CECD2FB5200792A300DE6FE7 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD2FB3200792A300DE6FE7 /* LabelTableViewCell.swift */; };
 		CECD2FB6200792A300DE6FE7 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECD2FB4200792A300DE6FE7 /* LabelTableViewCell.xib */; };
@@ -28,6 +29,7 @@
 		CE661539200628A1006B4AB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE66153B200628A1006B4AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE66154520062DD7006B4AB9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE7A92B52011CD54006AF7FA /* LicenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseItem.swift; sourceTree = "<group>"; };
 		CEBA4A812007A23A00ECF985 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		CECD2FB3200792A300DE6FE7 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
 		CECD2FB4200792A300DE6FE7 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				CECD2FBA200798CA00DE6FE7 /* VC */,
 				CECD2FB9200798B900DE6FE7 /* View */,
 				CEBA4A812007A23A00ECF985 /* License.swift */,
+				CE7A92B52011CD54006AF7FA /* LicenseItem.swift */,
 			);
 			path = Setting_License;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7A92B62011CD54006AF7FA /* LicenseItem.swift in Sources */,
 				CE661532200628A0006B4AB9 /* LicenseViewController.swift in Sources */,
 				CECD2FB5200792A300DE6FE7 /* LabelTableViewCell.swift in Sources */,
 				CECD2FB8200798AA00DE6FE7 /* LicenseListViewController.swift in Sources */,
