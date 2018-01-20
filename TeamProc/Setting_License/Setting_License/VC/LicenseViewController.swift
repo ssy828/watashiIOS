@@ -14,13 +14,7 @@ class LicenseViewController: UIViewController {
         super.viewDidLoad()
         //        let _ = licneseInstance.makeSentenceOfLicense("https://github.com/onevcat/Kingfisher", licenseTextView)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        self.licenseTextView.text = test
-    }
-    
-
 }
+
 
 

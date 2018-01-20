@@ -103,7 +103,11 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="9GG-4W-iaf" id="IHT-xc-SE4"/>
+<<<<<<< HEAD
                         <segue destination="oYC-PU-Wd2" kind="show" identifier="GoToLicenseVC" id="r5O-RJ-bYF"/>
+=======
+                        <segue destination="oYC-PU-Wd2" kind="show" id="KJ3-gy-LRZ"/>
+>>>>>>> arranged code
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxr-Or-E77" userLabel="First Responder" sceneMemberID="firstResponder"/>
