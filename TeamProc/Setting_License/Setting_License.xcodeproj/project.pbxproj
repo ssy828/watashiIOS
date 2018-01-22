@@ -14,6 +14,7 @@
 		CE66153A200628A1006B4AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE661538200628A1006B4AB9 /* LaunchScreen.storyboard */; };
 		CE66154620062DD8006B4AB9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66154520062DD7006B4AB9 /* SettingsViewController.swift */; };
 		CEBA4A822007A23A00ECF985 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA4A812007A23A00ECF985 /* License.swift */; };
+		CEC3FB8120159AD10087BCBA /* LicenseListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3FB8020159AD10087BCBA /* LicenseListItem.swift */; };
 		CECD2FB5200792A300DE6FE7 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD2FB3200792A300DE6FE7 /* LabelTableViewCell.swift */; };
 		CECD2FB6200792A300DE6FE7 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECD2FB4200792A300DE6FE7 /* LabelTableViewCell.xib */; };
 		CECD2FB8200798AA00DE6FE7 /* LicenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD2FB7200798AA00DE6FE7 /* LicenseListViewController.swift */; };
@@ -29,6 +30,7 @@
 		CE66153B200628A1006B4AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE66154520062DD7006B4AB9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CEBA4A812007A23A00ECF985 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		CEC3FB8020159AD10087BCBA /* LicenseListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListItem.swift; sourceTree = "<group>"; };
 		CECD2FB3200792A300DE6FE7 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
 		CECD2FB4200792A300DE6FE7 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
 		CECD2FB7200798AA00DE6FE7 /* LicenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				CECD2FBA200798CA00DE6FE7 /* VC */,
 				CECD2FB9200798B900DE6FE7 /* View */,
 				CEBA4A812007A23A00ECF985 /* License.swift */,
+				CEC3FB8020159AD10087BCBA /* LicenseListItem.swift */,
 			);
 			path = Setting_License;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE661532200628A0006B4AB9 /* LicenseViewController.swift in Sources */,
+				CEC3FB8120159AD10087BCBA /* LicenseListItem.swift in Sources */,
 				CECD2FB5200792A300DE6FE7 /* LabelTableViewCell.swift in Sources */,
 				CECD2FB8200798AA00DE6FE7 /* LicenseListViewController.swift in Sources */,
 				CE66154620062DD8006B4AB9 /* SettingsViewController.swift in Sources */,
