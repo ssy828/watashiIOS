@@ -20,8 +20,7 @@ class License {
     """
     
     public func makeText(_ ofGithubAddress: String?,
-                         year: Int,
-                         name: String,
+                         year: Int, name: String,
                          _ textView: UITextView) -> String {
         var sentence = ""
         if let githubAddr = ofGithubAddress {
