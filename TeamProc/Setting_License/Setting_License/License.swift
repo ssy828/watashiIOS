@@ -7,6 +7,7 @@ import Foundation
 import UIKit
 
 class License {
+    
     let introductionOfLicense = "The MIT License (MIT)"
     let text = "Copyright (c) "
     let licenseText = """
@@ -22,10 +23,12 @@ class License {
     public func makeText(_ ofGithubAddress: String?,
                          year: Int, name: String,
                          _ textView: UITextView) -> String {
+        let item = LicenseListItem.init(name: name, year: year,
+                                        githubAddr: ofGithubAddress)
         var sentence = ""
         if let githubAddr = ofGithubAddress {
             sentence =  introductionOfLicense + "\n" +
-                text + "<\(year)>" + "<\(name)>" +
+                text + "<\(item.year)>" + "<\(item.name)>" +
                 "\n" + "(\(githubAddr))" + "\n" +
                 "\n" + licenseText
             attributedOfLink(sentence, githubAddr, textView)

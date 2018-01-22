@@ -35,8 +35,8 @@ extension LicenseListViewController: UITableViewDelegate {
                    didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
         let licenseVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LicenseVC")
-        self.performSegue(withIdentifier: "GoToLicenseVC", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
+        navigationController?.pushViewController(licenseVC, animated: true)
         licenseVC.navigationItem.title = licenseTitleList[index]
     }
 }
