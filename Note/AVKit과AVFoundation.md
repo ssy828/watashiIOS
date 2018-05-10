@@ -32,6 +32,7 @@
 -AVAsset: 비디오 및 사운드와 같은 시각화 된 오디오 비주얼 미디어를 모델링하는 데 사용되는 추상 불변 클래스
 -> 오디오,비디오,텍스트,자막 등 국한되지 않는 단일 미디어 유형의 각 트랙을 함께 표시하거나 처리가능한 하나이상의 트랙 포함 가능!
 
+---
 ### 사운드 파일 재생: AVAudioPlayrer
 
 ######AVAudioPlayer 클래스는 파일 또는 메모리에 있는 사운드 데이터를 재생하는 기능 제공
@@ -53,6 +54,8 @@
 
 -사운드 반복재생 기능
 
+--
+######AVFileType 링크 - [https://developer.apple.com/documentation/avfoundation/avfiletype]()
 --
 
 *AVAudioPlayer 주요 프로퍼티*

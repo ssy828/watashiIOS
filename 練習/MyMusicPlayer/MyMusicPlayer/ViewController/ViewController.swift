@@ -41,8 +41,7 @@ extension ViewController{
         
         // 음악이 저장된 파일주소 저장될 곳
         
-        if let urlPath = Bundle.main.url(forResource: "Music/0", withExtension: "mp3")
-        {
+        if let urlPath = Bundle.main.url(forResource: "Music/0", withExtension: "mp3"){
             // 음악 URL 담을 프로퍼티 필요하고
             let asset = AVAsset(url: urlPath)
             let playItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: nil)
@@ -51,21 +50,11 @@ extension ViewController{
         }
         
     }
-    // 다음곡 실행버튼
-    @IBAction func nextBtn(_ sender: Any) {
-    }
-    
-    // 볼륨
-    @IBAction func slider(_ sender: Any) {
-        
-    }
     
     // 버튼사용시 음악파일 데이터를 가져와야하므로 -> 함수필요
-    func musicPlay()
-    {
-//        let url = 
-        if let urlPath = Bundle.main.url(forResource: "Music/0", withExtension: "mp3")
-        {
+    func musicPlay(){
+
+        if let urlPath = Bundle.main.url(forResource: "Music/0", withExtension: "mp3"){
             let assets = AVAsset(url: urlPath)
             let playItem = AVPlayerItem(asset: assets)
             audioPlayer = AVPlayer(playerItem: playItem)
@@ -104,10 +93,8 @@ extension ViewController: UICollectionViewDataSource
         
     }
     // MARK: 탭 했을때 가사뷰 띄우기
-    @objc func didTapGesture(_ sender: UITapGestureRecognizer)
-    {
-        if let lyricsVC = self.storyboard?.instantiateViewController(withIdentifier: "LyricsVC") as? LyricsVC
-        {
+    @objc func didTapGesture(_ sender: UITapGestureRecognizer){
+        if let lyricsVC = self.storyboard?.instantiateViewController(withIdentifier: "LyricsVC") as? LyricsVC{
             lyricsVC.data = musicModel.albumInfo[currentIndex]
             self.addChildViewController(lyricsVC)
             self.view.addSubview(lyricsVC.view)
@@ -116,8 +103,7 @@ extension ViewController: UICollectionViewDataSource
     }
 }
 
-extension ViewController: UICollectionViewDelegate
-{
+extension ViewController: UICollectionViewDelegate{
     // MARK: 셀이 선택되었을 때 실행하는 부분
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentIndex = indexPath.row
@@ -125,11 +111,9 @@ extension ViewController: UICollectionViewDelegate
 }
 
 // MARK: CollectionViewDelegateFlowLayout
-extension ViewController: UICollectionViewDelegateFlowLayout
-{
+extension ViewController: UICollectionViewDelegateFlowLayout{
     // MARK: 확장에서
     // 저장프로퍼티만 불가능!
-    
     
     // MARK: 셀(아이템) 사이즈 지정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -160,5 +144,4 @@ extension ViewController: UICollectionViewDelegateFlowLayout
 //{
 //
 //}
-
 

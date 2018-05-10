@@ -41,10 +41,8 @@ struct AlbumInfo {
                 case "artwork":
                    self.imageData = item.dataValue
                    
-                    if let data = imageData
-                    {
-                        if let image = UIImage(data: data)
-                        {
+                    if let data = imageData{
+                        if let image = UIImage(data: data){
                             self.image = image
                         }
                     }

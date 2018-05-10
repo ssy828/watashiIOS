@@ -33,8 +33,7 @@ class ViewController: UIViewController {
         //        self.collectionView.isPagingEnabled = true
         let baseURL = musicModel.albumInfo[currentIndex]
         // 번들에 담긴 음악주소를 가져와서 실행
-        if let url =  Bundle.main.url(forResource: "Music/\(baseURL.songURL)", withExtension: "mp3")
-        {
+        if let url =  Bundle.main.url(forResource: "Music/\(baseURL.songURL)", withExtension: "mp3") {
             do{ // AVAudioPlayer는 throws 사용하므로
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
             }catch let error{
@@ -60,8 +59,7 @@ extension ViewController {
     @IBAction func playOrPauseBtn(_ sender: UIButton) {
         audioPlayer.prepareToPlay()
         // 버퍼를 미리 준비해 재생할 오디오 플레이어 준비함!
-        if audioPlayer.isPlaying
-        {
+        if audioPlayer.isPlaying{
             audioPlayer.pause()
             sender.setImage((#imageLiteral(resourceName: "46-multimeda-pause")), for: UIControlState.normal)
         }else{
@@ -84,15 +82,13 @@ extension ViewController {
     func musicPlay(){
         let baseURL = musicModel.albumInfo[currentIndex]
         // 번들에 담긴 음악주소를 가져와서 실행
-        if let url =  Bundle.main.url(forResource: "Music/\(baseURL.songURL)", withExtension: "mp3")
-        {
+        if let url =  Bundle.main.url(forResource: "Music/\(baseURL.songURL)", withExtension: "mp3"){
             do{ // AVAudioPlayer는 throws 사용하므로
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
                 if audioPlayer.isPlaying == false
                 { // 음악실행 중아니면 -> 음악실행
                     audioPlayer.play()
-                }else
-                {// 음악실행 중이면 -> 음악멈춤
+                }else{// 음악실행 중이면 -> 음악멈춤
                     audioPlayer.pause()
                 }
             }catch let error{
@@ -101,8 +97,7 @@ extension ViewController {
         }
     }
     // MARK: 버튼을 누르면 그 다음 페이지가 뜨게하는 메소드
-    func clickToTheCurrentPage()
-    {
+    func clickToTheCurrentPage(){
         collectionView.scrollToItem(at: IndexPath.init(row: currentIndex, section: 0), at: .centeredHorizontally , animated: true)
         // 현재 컬렉션 뷰를 horizontal로 설정해서
         // 스크롤이 넘길때 수평으로 넘어가서 .centeredHorizontally로 설정
