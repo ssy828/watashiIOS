@@ -7,8 +7,7 @@ import Foundation
 import UIKit
 
 // MARK: UserDefaults 객체에 데이터를 저장할 때 사용될 키값
-struct UserInfoKey
-{
+struct UserInfoKey {
     // 저장에 사용할 키
     static let loginId = "LoginID" // 왜 static?
     static let account = "Account"
@@ -21,13 +20,11 @@ struct UserInfoKey
 let ud = UserDefaults.standard
 
 // MARK: 계정 정보를 저장 관리하는 클래스
-class UserInfoManager
-{
+class UserInfoManager {
     // 로그인 아이디 :연산 프로퍼티
     // get: 프로퍼티 리스트에 저장된 로그인 아이디를 꺼내어 제공
     // set: loginId프로퍼티에 할당된 값을 프로퍼티 리스트에 저장
-    var loginId: Int
-    {
+    var loginId: Int {
         get{
             return ud.integer(forKey: UserInfoKey.loginId)
         }
@@ -38,8 +35,7 @@ class UserInfoManager
     }
     // 계정
     // 로그인 하지 않았을 경우 nil로 설정하기위해
-    var account: String?
-    {
+    var account: String? {
         get{
             return ud.string(forKey: UserInfoKey.account)
         }
@@ -50,8 +46,7 @@ class UserInfoManager
     }
     
     // 이름
-    var name: String?
-    {
+    var name: String? {
         get{
             return ud.string(forKey: UserInfoKey.name)
         }
@@ -62,8 +57,7 @@ class UserInfoManager
     }
     
     // 프로파일
-    var profile: UIImage?
-    {
+    var profile: UIImage? {
         get{
             if let profile = ud.data(forKey: UserInfoKey.profile)
             {
@@ -94,8 +88,7 @@ class UserInfoManager
     
     // 로그인 메소드
     // 이 곳은 나중에 서버와 연동 코드로 대체
-    func login(account: String, pwd: String) -> Bool
-    {
+    func login(account: String, pwd: String) -> Bool {
         if account.isEqual("abc@naver.com") && pwd.isEqual("1234"){
             ud.set(100, forKey: UserInfoKey.loginId)
             ud.set(account, forKey: UserInfoKey.account)
@@ -108,8 +101,7 @@ class UserInfoManager
     }
     
     // 로그아웃 메소드 
-    func logout() -> Bool
-    {
+    func logout() -> Bool {
         ud.removeObject(forKey: UserInfoKey.loginId)
         ud.removeObject(forKey: UserInfoKey.account)
         ud.removeObject(forKey: UserInfoKey.name)

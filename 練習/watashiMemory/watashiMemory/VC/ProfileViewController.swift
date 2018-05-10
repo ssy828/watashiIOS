@@ -23,8 +23,7 @@ class ProfileViewController: UIViewController {
     }
 
     // MARK: 메소드
-    func doLogin(_ sender: Any)
-    {
+    func doLogin(_ sender: Any) {
         let loginAlert = UIAlertController(title: "Login", message: nil, preferredStyle: UIAlertControllerStyle.alert)
         // 알림창에 들어갈 입력폼 추가
         loginAlert.addTextField { (tf) in
@@ -42,8 +41,7 @@ class ProfileViewController: UIViewController {
             let pwd = loginAlert.textFields?[1].text ?? ""
             
             // 로그인 성공시 처리할 내용 여기에 들어갈 예정
-            if self.userInfo.login(account: account, pwd: pwd)
-            {
+            if self.userInfo.login(account: account, pwd: pwd) {
                 
             }else{
                 let msg = "로그인에 실패!"
@@ -57,8 +55,7 @@ class ProfileViewController: UIViewController {
     }
     
     // 로그아웃
-    func doLogOut(_ sender: Any)
-    {
+    func doLogOut(_ sender: Any) {
         //
         let msg = "로그아웃 할까요?"
         let alert = UIAlertController(title: nil, message: msg, preferredStyle: UIAlertControllerStyle.alert)
