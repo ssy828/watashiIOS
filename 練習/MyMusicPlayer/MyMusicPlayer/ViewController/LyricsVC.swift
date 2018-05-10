@@ -31,7 +31,5 @@ class LyricsVC: UIViewController {
         self.view.removeFromSuperview()
         self.removeFromParentViewController()
     }
-    
-    
 
 }

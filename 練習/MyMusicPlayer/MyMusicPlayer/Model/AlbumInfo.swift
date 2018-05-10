@@ -4,8 +4,7 @@ import Foundation
 import UIKit
 import AVKit
 // MARK: 앨범정보 데이터
-struct AlbumInfo
-{
+struct AlbumInfo {
     var artistName: String?// 가수이름
     var image: UIImage? // 이미지
     var lyrics: String? // 가사
@@ -13,8 +12,7 @@ struct AlbumInfo
     var title: String? // 제목
     var songURL: String? // 파일 url 담을 곳
     
-    init?(fileName: String)
-    {
+    init?(fileName: String) {
         self.songURL = fileName
         
         // MARK: 1. 번들에서 넣은 노래파일 꺼내오기
@@ -30,15 +28,12 @@ struct AlbumInfo
         
         self.lyrics = assets.lyrics
         // 4. 배열에 담긴 AVMetadataItem을 하나씩 빼서
-        for item in metadata
-        {
+        for item in metadata {
             print(item)
             // 5. rawvalue(원자값)을 통해 키 값에 따라서 처리
-            if let key = item.commonKey?.rawValue
-            {
+            if let key = item.commonKey?.rawValue {
                 print(key)
-                switch key
-                {
+                switch key {
                 case "title":
                     self.title = item.value as? String
                 case "artist":

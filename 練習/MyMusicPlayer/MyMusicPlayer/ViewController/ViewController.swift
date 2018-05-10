@@ -31,8 +31,7 @@ class ViewController: UIViewController {
     
 }
 // MARK: 버튼
-extension ViewController
-{
+extension ViewController{
     // 뒤로가기 버튼
     @IBAction func previousBtn(_ sender: Any) {
         

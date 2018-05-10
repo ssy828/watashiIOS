@@ -45,8 +45,7 @@ class ViewController: UIViewController {
   
 }
 // MARK: Action
-extension ViewController
-{
+extension ViewController {
     // 뒤로가기 버튼
     @IBAction func previousBtn(_ sender: UIButton) {
        // 현재 인덱스에서 전의 인덱스로 가야하므로 -1
@@ -56,7 +55,7 @@ extension ViewController
         // 페이지 바뀌는 메서드
         clickToTheCurrentPage()
         
-    }
+}
     // 실행 버튼
     @IBAction func playOrPauseBtn(_ sender: UIButton) {
         audioPlayer.prepareToPlay()
@@ -69,8 +68,7 @@ extension ViewController
             audioPlayer.play()
             sender.setImage((#imageLiteral(resourceName: "42-multimeda-play")), for: UIControlState.normal)
         }
-
-    }
+}
     // 다음곡 실행버튼
     @IBAction func nextBtn(_ sender: UIButton) {
         // 다음 곡 실행을 위해 현재인덱스에서 1을 더함
@@ -81,15 +79,9 @@ extension ViewController
         clickToTheCurrentPage()
     }
     
-    // 볼륨
-    @IBAction func slider(_ sender: Any) {
-        
-    }
-    
     // MARK: 음악플레이 메소드
     // 버튼사용시 음악파일 데이터를 가져와야하므로 -> 함수필요
-    func musicPlay()
-    {
+    func musicPlay(){
         let baseURL = musicModel.albumInfo[currentIndex]
         // 번들에 담긴 음악주소를 가져와서 실행
         if let url =  Bundle.main.url(forResource: "Music/\(baseURL.songURL)", withExtension: "mp3")
@@ -117,8 +109,7 @@ extension ViewController
     }
 }
 // MARK: Datasource
-extension ViewController: UICollectionViewDataSource
-{
+extension ViewController: UICollectionViewDataSource {
     
     // MARK: 섹션의아이템(셀)개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -146,8 +137,7 @@ extension ViewController: UICollectionViewDataSource
   
 }
 // MARK: UICollectionViewDelegate
-extension ViewController: UICollectionViewDelegate
-{
+extension ViewController: UICollectionViewDelegate {
     // MARK: 셀이 선택되었을 때 실행하는 부분
     // 어느 곳을 선택해도 가사뷰 나오게하려고 이쪽에 넣음
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -163,8 +153,7 @@ extension ViewController: UICollectionViewDelegate
 }
 
 // MARK: CollectionViewDelegateFlowLayout
-extension ViewController: UICollectionViewDelegateFlowLayout
-{
+extension ViewController: UICollectionViewDelegateFlowLayout {
     // 확장: 저장프로퍼티만 불가능!
     
     // MARK: 셀(아이템) 사이즈 지정

@@ -44,8 +44,7 @@ class CustomFlowLayout: UICollectionViewFlowLayout {
         return targetContentOffset
     }
     
-    func distance(ofCenter centerx:CGFloat) -> CGFloat
-    {
+    func distance(ofCenter centerx:CGFloat) -> CGFloat {
         guard let collectionView = self.collectionView else {
             return 0
         }
