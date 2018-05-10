@@ -151,4 +151,5 @@
 	}
 	
 --
-참고 문헌 - 애플 문서 / 참고 링크 - [http://www.edwith.org/boostcourse-ios/lecture/16846/]()
+참고 문헌 - 애플 공식 문서
+

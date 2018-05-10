@@ -60,4 +60,4 @@ var minimumTrackTintColor: UIColor?, var maximumTrackTintColor: UIColor?: thumb�
 	
 --
 참고 링크 -
-[http://www.edwith.org/boostcourse-ios/lecture/20140/]()
+[https://developer.apple.com/documentation/uikit/uislider/]()

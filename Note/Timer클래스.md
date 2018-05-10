@@ -49,4 +49,4 @@
 	func init(fireAt: Date, interval: TimeInterval, target: Any, selector: Selector, userInfo: Any?, repeats: Bool)
 
 --
-참고링크: [http://www.edwith.org/boostcourse-ios/lecture/16846/]()
+참고링크: [https://developer.apple.com/documentation/foundation/timer]()
