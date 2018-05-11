@@ -169,6 +169,15 @@ class SecondViewController: UIViewController {
 	3. 선택한 뷰 컨트롤러가 내비게이션 컨트롤러의 루트 뷰 컨트롤러가 되면서 내비게이션 컨트롤러가 생성됩니다.
 	4. 위의 방법 외에도 객체 라이브러리에서 내비게이션 컨트롤러를 드로그 앤 드롭해서 캔버스에 올릴 경우 테이블 뷰를 포함한 루트 뷰 컨트롤러가 생성되면서 내비게이션 컨트롤러가 만들어집니다.
 
+---
+**내비게이션 바 2페이지 이후 부터 생성**
+
+######루트 뷰 컨트롤러 이후 두번째 뷰 컨트롤러에 내비게이션 바가 자동생성 안되므로
+	
+	1. navigtaion Item 추가
+	2. bar button Item 추가
+	3. 다른 뷰컨트롤러와 show로 연결 
+
 -
 ###세그웨이를 이용한 화면 전환
 
@@ -211,6 +220,7 @@ performSegue(withIdentifier:<세그웨이 식별자>, sender:<세그웨이 실�
 	
 -
 ###Unwind - 화면 복귀
+######참고 p236~
 
 - 이전 화면으로 돌아가는 것 = Unwind
 - 새로운 화면으로 전환 하는 것 = Wind
@@ -220,9 +230,48 @@ performSegue(withIdentifier:<세그웨이 식별자>, sender:<세그웨이 실�
 => *Exit 아이콘 연결 - 뷰컨트롤러 B, Unwind Segue 메소드 작성 - 뷰 컨트롤러A*
 
 ######뷰 컨트롤러의 인스터스는 하나 이상 존재하면 안됨. 중복 불가.
-######참고 p236~
 
+######참고 p243~
+**한꺼번에 여러 페이지 복귀하기**
 
+- 첫번째 뷰컨트롤러에 Unwind Segue 메소드 작성
+
+		import UIKit
+		class FirstViewController: UIViewController {
+	
+	    // Unwind Segue
+	    @IBAction func goToHomePage(_ sender: UIStoryboardSegue){ }
+	    
+	    override func viewDidLoad() {
+	        super.viewDidLoad()
+	
+	        // Do any additional setup after loading the view.
+	      }
+		}
+	
+- 마지막 뷰 컨트롤러에서 Home 바버튼을 상단 도크 바에 Exit 아이콘에 드래그 해 Unwind Segue와 연결
+
+---
+Unwind Segue 실행 -> 첫번째 뷰컨트롤러 화면이 나타남과 동시에 내비게이션 스택의 중간에 쌓여있던 인스턴스는 메모리에서 모두 삭제됨!(프로그래밍 용어: dealloc)
+
+**Unwind Segue - 프레젠테이션 방식이나 내비게이션 컨트롤러를 이용한 방식에 구분 없이 실행되는 것이 특징! **
+
+**중간 페이지로 복귀하기**
+
+- Unwind Segue가 향할 대상 뷰 컨트롤러에 메소드를 추가해주기!
+	
+		import UIKit
+		class Page2ViewController: UIViewController {
+		
+		    // Unwind Segue
+		    @IBAction func backToPage2(_ sender: UIStoryboardSegue){ }
+		    
+		    override func viewDidLoad() {
+		        super.viewDidLoad()
+		        // Do any additional setup after loading the view.
+		    }
+		
+		}
 -
 참고 문헌 - 꼼꼼한 재은씨 Swift: 기본편
 	

@@ -67,9 +67,7 @@
 				CE79A94620A5A674007E4164 /* Assets.xcassets */,
 				CE79A94820A5A674007E4164 /* LaunchScreen.storyboard */,
 				CE79A94B20A5A674007E4164 /* Info.plist */,
-				CE79A95420A5B5A3007E4164 /* UnwindSegue.storyboard */,
-				CE79A95620A5B83E007E4164 /* FirstViewController.swift */,
-				CE79A95820A5BB28007E4164 /* Page2ViewController.swift */,
+				CE79A95B20A5BCEB007E4164 /* UnwindSegue */,
 			);
 			path = "Screen Transitions";
 			sourceTree = "<group>";
@@ -82,6 +80,16 @@
 				CE79A94320A5A673007E4164 /* Main.storyboard */,
 			);
 			path = ScreenTransitionsOfViewController;
+			sourceTree = "<group>";
+		};
+		CE79A95B20A5BCEB007E4164 /* UnwindSegue */ = {
+			isa = PBXGroup;
+			children = (
+				CE79A95420A5B5A3007E4164 /* UnwindSegue.storyboard */,
+				CE79A95620A5B83E007E4164 /* FirstViewController.swift */,
+				CE79A95820A5BB28007E4164 /* Page2ViewController.swift */,
+			);
+			path = UnwindSegue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

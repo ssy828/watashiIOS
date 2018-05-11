@@ -35,7 +35,7 @@
         <!--page2-->
         <scene sceneID="45O-LA-Q2X">
             <objects>
-                <viewController id="JKu-da-lsX" sceneMemberID="viewController">
+                <viewController id="JKu-da-lsX" customClass="Page2ViewController" customModule="Screen_Transitions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z9V-xS-5H4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +89,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <state key="normal" title="back to page2"/>
+                                <connections>
+                                    <segue destination="aQM-CX-2FL" kind="unwind" unwindAction="backToPage2:" id="teC-Lm-9yE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
