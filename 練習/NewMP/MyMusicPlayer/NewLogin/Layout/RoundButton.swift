@@ -10,8 +10,7 @@ class RoundButton: UIButton {
     // MARK: 스토리보드에서 사용할때 쓰는 init
     // 스토리보드 코드 : NSCoder
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder){
         // UIButton을 상속받으므로 super!
         super.init(coder: aDecoder)
         self.layer.cornerRadius = 10

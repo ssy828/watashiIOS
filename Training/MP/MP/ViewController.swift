@@ -42,6 +42,8 @@ class ViewController: UIViewController {
     //MARK: IBActions
     // 재생 멈춤 버튼 눌렀을 경우
     @IBAction func touchPlayPauseButton(_ sender: UIButton) {
+        // sender.isSelected에
+        // 현재 sender.isSelected의 반대 상태를 넣어줌
         sender.isSelected = !sender.isSelected
         if sender.isSelected {
             self.audioPlayer?.play()
