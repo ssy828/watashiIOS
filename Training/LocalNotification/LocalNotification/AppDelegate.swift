@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // 사용자 동의 여부 창을 실행
             let notiCenter = UNUserNotificationCenter.current()
             notiCenter.requestAuthorization(options: [.alert,.badge,.sound]) { (didAllow, error) in
+                notiCenter.delegate = self // 알림과 관련된 일이 발생하면 앱 델리게이트(나)에게 알려줘!
             }
         }else{
             // 경고창, 배지, 사운드 알림 환경 정보 생성
@@ -85,5 +86,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+}
+
+// MARK: -UNUserNotificationCenterDelegate
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    @available(iOS 10.0, *) // ios 10 버전부터만 가능한 메소드
+    // 앱 실행 중 메시지 알림 등 배너로 표시 가능한 메소드
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping(UNNotificationPresentationOptions) -> Void) {
+        if notification.request.identifier == "일어나" { // 식별 아이디: 클릭한 알림 메시지 구별가능
+            let userInfo = notification.request.content.userInfo
+            print(userInfo["name"]!)
+        }
+        // 알림 배너 띄워주기
+        completionHandler([.alert,.badge,.sound]) // 호출하지 않으면 배너에 표시 안됨
+    }
+    @available(iOS 10.0, *)
+    // 실제 사용자가 배너 클릭시 실행되는 메소드
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.notification.request.identifier == "일어나"{
+            let userInfo = response.notification.request.content.userInfo
+            print(userInfo["name"]!)
+        }
+    }
 }
 
