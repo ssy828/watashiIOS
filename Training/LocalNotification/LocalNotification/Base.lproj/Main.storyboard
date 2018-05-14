@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thh-xM-0ZZ">
-                                <rect key="frame" x="10" y="111" width="355" height="40"/>
+                                <rect key="frame" x="10" y="50" width="355" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bqk-NL-fxv"/>
                                 </constraints>
@@ -28,29 +28,27 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ru2-kp-jUf">
-                                <rect key="frame" x="0.0" y="222" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="547960128.46965098">
                                     <!--2018-05-14 03:08:48 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcS-SO-kZu">
-                                <rect key="frame" x="160" y="490" width="55" height="30"/>
-                                <state key="normal" title="save"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgc-Dv-rVA">
+                                <rect key="frame" x="164" y="388" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="de3-uM-c8g"/>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tpe-Xl-tg7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Thh-xM-0ZZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="FUd-gI-NL3"/>
-                            <constraint firstItem="fcS-SO-kZu" firstAttribute="top" secondItem="Ru2-kp-jUf" secondAttribute="bottom" constant="52" id="GHK-Xs-08K"/>
                             <constraint firstItem="Ru2-kp-jUf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KgW-Nt-gKI"/>
-                            <constraint firstItem="Thh-xM-0ZZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="Kik-cN-tfV"/>
-                            <constraint firstItem="Ru2-kp-jUf" firstAttribute="top" secondItem="Thh-xM-0ZZ" secondAttribute="bottom" constant="71" id="S5v-py-cgF"/>
+                            <constraint firstItem="Thh-xM-0ZZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Kik-cN-tfV"/>
+                            <constraint firstItem="Ru2-kp-jUf" firstAttribute="top" secondItem="Thh-xM-0ZZ" secondAttribute="bottom" constant="40" id="S5v-py-cgF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Thh-xM-0ZZ" secondAttribute="trailing" constant="10" id="XOm-lo-I6S"/>
-                            <constraint firstItem="fcS-SO-kZu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="hGX-Or-Age"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fcS-SO-kZu" secondAttribute="trailing" constant="160" id="rra-og-KtQ"/>
                             <constraint firstItem="Ru2-kp-jUf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x2f-KY-NLE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
