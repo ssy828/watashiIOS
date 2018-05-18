@@ -23,8 +23,7 @@ class ViewController: UIViewController {
     func createBtn()
     {
         // 배열의 경우 9개버튼을 인덱스값 0~8
-        for index in 0...8
-        {   // .system: 자유롭게 스타일 바꿀 수 있음
+        for index in 0...8 {   // .system: 자유롭게 스타일 바꿀 수 있음
             let btn: UIButton = UIButton(type: UIButtonType.system)
             btn.tag = index
             btnArr.append(btn)
@@ -40,13 +39,11 @@ class ViewController: UIViewController {
     
     // MARK: -버튼 9개칸에 넣기
     // 반환값없음 : 그냥 9개 칸에 버튼을 세팅.
-    func setFrameOfBtn()
-    {
+    func setFrameOfBtn() {
         let btnWidth = view.frame.size.width/3// 전체 버튼가로크기
         let btnHeight  = (view.frame.size.height/2)/3 // 전체 버튼 세로크기
        // 버튼배열에 담은 것을 빼내서 배열에 따라서 칸에 버튼 집어넣기
-        for btn in btnArr
-        {
+        for btn in btnArr {
             let index = btn.tag
             let line = index%3 // 행: x좌표 : 나머지가 0,1,2일 경우에 따라
             let col = index/3  // 열: y좌표
@@ -67,8 +64,8 @@ class ViewController: UIViewController {
         // 위의 버튼을 눌렀을때 실행시키는 것!
         
         // 기능마다 분리해서 만들기!!
-        for btn in btnArr
-        { // 13579 / 2468 태그일 경우 실행 색깔이 바뀜
+        for btn in btnArr{
+           // 13579 / 2468 태그일 경우 실행 색깔이 바뀜
           // 여기서 반복적으로 배열에 있는 모든 수를 비교해서 실행
             let subBtn = isEvenNumber(num: btn.tag)
             
@@ -83,28 +80,11 @@ class ViewController: UIViewController {
             
         }
         
-//        // btn이 배열에 들어가 있어서 배열 인덱스로 꺼내기
-//        switch isSimultaneousNum {
-//        case 1,3,5,7:
-//            sender.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
-//        default:
-//            sender.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-//        }
-//
-        // 버튼클릭시 색깔 바뀌게 하는 것
-//        if sender.isSelected {
-//            sender.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
-//            sender.isSelected = false
-//        }else{
-//            sender.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-//            sender.isSelected = true
-//        }
     }
     
     // 짝수 태그일 경우: 불값으로 반환
     func isEvenNumber(num: Int) -> Bool {
-        if num % 2 == 0
-        {
+        if num % 2 == 0 {
             return true
         }
         return false
