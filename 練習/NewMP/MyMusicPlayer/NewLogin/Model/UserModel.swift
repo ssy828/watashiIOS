@@ -4,21 +4,14 @@
 
 import Foundation
 // UserModel과 데이터파일(Plist) 중간 역할
-class UsefModel
-{
+class UsefModel{
     
     var userModel: Users?
     
-    init()
-    {
-        
-    }
+    init(){}
     
-    func loadData()
-    {
-        if let url = Bundle.main.url(forResource: "UserData", withExtension: "plist")
-        {
-            
+    func loadData(){
+        if let url = Bundle.main.url(forResource: "UserData", withExtension: "plist"){
         }
     }
 }
