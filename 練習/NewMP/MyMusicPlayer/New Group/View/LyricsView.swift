@@ -6,8 +6,7 @@
 import UIKit
 // 가사뷰 띄울 곳!
 // 지금 뷰위에는 올려만 놓고 실행은 뷰컨트롤러에서 한다!
-class LyricsView: UIView
-{
+class LyricsView: UIView {
     // 이 클래스 뷰가 처음부터 안 보이게 hidden을 해놓고
     @IBOutlet var textView: UITextView!
    
@@ -21,6 +20,4 @@ class LyricsView: UIView
     @objc func didTapGesture(_ sender: UITapGestureRecognizer) {
         self.isHidden = true // LyricsView 자체를 숨김
     }
-  
-    
 }

@@ -273,7 +273,7 @@ Unwind Segue 실행 -> 첫번째 뷰컨트롤러 화면이 나타남과 동시�
 
 **중간 페이지로 복귀하기**
 
-- Unwind Segue가 향할 대상 뷰 컨트롤러에 메소드를 추가해주기!
+- **Unwind Segue가 향할 대상 뷰 컨트롤러에 메소드를 추가해주기!**
 	
 		import UIKit
 		class Page2ViewController: UIViewController {

@@ -1,8 +1,6 @@
 //
 import UIKit
 
-class MyCell: UITableViewCell
-{
+class MyCell: UITableViewCell{
     @IBOutlet var contentLb: UILabel!
-    
 }

@@ -28,9 +28,6 @@ class ViewController: UIViewController {
     // MARK: -Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //        loadData()
-        //        self.collectionView.isPagingEnabled = true
         let baseURL = musicModel.albumInfo[currentIndex]
         // 번들에 담긴 음악주소를 가져와서 실행
         if let url =  Bundle.main.url(forResource: "Music/\(baseURL.songURL)", withExtension: "mp3") {
@@ -85,8 +82,7 @@ extension ViewController {
         if let url =  Bundle.main.url(forResource: "Music/\(baseURL.songURL)", withExtension: "mp3"){
             do{ // AVAudioPlayer는 throws 사용하므로
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
-                if audioPlayer.isPlaying == false
-                { // 음악실행 중아니면 -> 음악실행
+                if audioPlayer.isPlaying == false { // 음악실행 중아니면 -> 음악실행
                     audioPlayer.play()
                 }else{// 음악실행 중이면 -> 음악멈춤
                     audioPlayer.pause()
@@ -112,24 +108,17 @@ extension ViewController: UICollectionViewDataSource {
     }
     // MARK: 셀구현
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
-        
         // 커스텀셀로 다운 캐스팅
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCollectionViewCell
-        
         // 뮤직모델(인스턴스)가 앨범정보배열에 파라미터 indexPath의 row프로퍼티를 담음
         let data = musicModel.albumInfo[indexPath.row]
-
         // 셀에서 넘길때 사용하는 것!
         cell.artistLb.text = data.artistName
         cell.imageView.image = data.image
         cell.titleLb.text = data.title
         cell.textView.text = data.lyrics
-
         return cell
-        
     }
-  
 }
 // MARK: UICollectionViewDelegate
 extension ViewController: UICollectionViewDelegate {
@@ -137,7 +126,6 @@ extension ViewController: UICollectionViewDelegate {
     // 어느 곳을 선택해도 가사뷰 나오게하려고 이쪽에 넣음
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentIndex = indexPath.row // 현재 선택할 음악 위치
-        
         lyricsView.isHidden = false // 셀 선택시 가사뷰 보이게 하고
         lyricsView.textView.text = self.musicModel.albumInfo[indexPath.row].lyrics
         // 이때 가사뷰인스턴스가 LyricsView 클래스에 있는
@@ -150,12 +138,10 @@ extension ViewController: UICollectionViewDelegate {
 // MARK: CollectionViewDelegateFlowLayout
 extension ViewController: UICollectionViewDelegateFlowLayout {
     // 확장: 저장프로퍼티만 불가능!
-    
     // MARK: 셀(아이템) 사이즈 지정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.size.width * 0.8
         let height = collectionView.bounds.size.height * 0.9
-        
         return CGSize(width: width, height: height)
     }
     

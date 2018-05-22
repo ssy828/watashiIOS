@@ -35,14 +35,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     // 셀을 어떻게 표현할지 구성하는 부분
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = emailTableView.dequeueReusableCell(withIdentifier: "EmailCell", for: indexPath) as! MyCell
-       
         cell.contentLb.text = emailData[indexPath.row] as? String
         // emailDat 배열의 인덱스의 row를 값이 있다면 String타입으로 가져온다!
-        
-        
-        
-        
-        
         return cell
     }
 

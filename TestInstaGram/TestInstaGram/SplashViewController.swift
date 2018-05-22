@@ -26,7 +26,7 @@ class SplashViewController: UIViewController {
   }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue){
-        self.performSegue(withIdentifier: "segueSplashToLogin", sender: nil)
+       self.performSegue(withIdentifier: "segueSplashToLogin", sender: nil)
     }
 }
 
