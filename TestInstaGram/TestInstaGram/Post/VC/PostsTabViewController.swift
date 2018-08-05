@@ -84,10 +84,6 @@ extension PostsTabViewController: UITableViewDataSource{
     }
     
 }
-// MARK: UITableViewDelegate
-extension PostsTabViewController: UITableViewDelegate{
-    
-}
 
 struct Post{
     var key: String?

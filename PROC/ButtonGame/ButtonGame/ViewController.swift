@@ -20,8 +20,7 @@ class ViewController: UIViewController {
 
     // MARK: -버튼 생성 함수
     // 버튼만 생성하므로 반환값도 파라미터도 필요 없음!
-    func createBtn()
-    {
+    func createBtn(){
         // 배열의 경우 9개버튼을 인덱스값 0~8
         for index in 0...8 {   // .system: 자유롭게 스타일 바꿀 수 있음
             let btn: UIButton = UIButton(type: UIButtonType.system)
